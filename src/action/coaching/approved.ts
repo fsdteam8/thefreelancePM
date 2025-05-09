@@ -67,7 +67,7 @@ export async function approveCoaching(coachingId: string) {
   await resend.emails.send({
     from: "FreelancePM Club  <support@thefreelancepmclub.com>",
     to: [coaching.email as string],
-    subject: "Google Meet Invitation:  Discussion with Ashanti Johnson, PMP",
+    subject: "Zoom Invitation:  Discussion with Ashanti Johnson, PMP",
     react: MeetingInvite({
       meetingDate: moment(coaching.date).format("MMMM Do, YYYY"),
       meetingTime: coaching.time,
