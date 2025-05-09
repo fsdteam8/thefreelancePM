@@ -62,8 +62,8 @@ export const MeetingInvite = ({
               </Text>
 
               <Text className="text-gray-600 mt-4 mb-6">
-                Join us for a meeting with {hostName}, {hostTitle} to discuss
-                our upcoming projects and initiatives.
+                Join us for a meeting with {hostName}, PMP, to discuss the next
+                steps with your project management journey!
               </Text>
 
               <Text className="text-gray-700 font-medium">

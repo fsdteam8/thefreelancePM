@@ -2,9 +2,9 @@
 
 import base64 from "base-64";
 
-const ZOOM_ACCOUNT_ID = "rq1w83k-ToOO_nvz_lHQAQ";
-const ZOOM_CLIENT_ID = "f89zcIuSCjf9annSkFAw";
-const ZOOM_CLIENT_SECRET = "JszeYibgT185mDitGOfFoyRmOsSxM0Fj";
+const ZOOM_ACCOUNT_ID = process.env.ZOOM_ACCOUNT_ID;
+const ZOOM_CLIENT_ID = process.env.ZOOM_CLIENT_ID;
+const ZOOM_CLIENT_SECRET = process.env.ZOOM_CLIENT_SECRET;
 
 const getAuthHeaders = () => {
   return {
