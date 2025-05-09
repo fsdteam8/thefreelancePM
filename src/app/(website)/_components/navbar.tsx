@@ -59,7 +59,7 @@ const navlinks = [
   },
   {
     id: 9,
-    label: "Faqs",
+    label: "FAQs",
     href: "/faq",
   },
 ];

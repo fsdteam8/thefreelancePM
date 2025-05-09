@@ -29,7 +29,7 @@ export default async function RootLayout({
 
         <Toaster closeButton richColors />
 
-        <NextTopLoader />
+        <NextTopLoader showSpinner={false} />
       </body>
     </html>
   );

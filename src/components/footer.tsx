@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,25 +22,32 @@ const Footer = () => {
           </p>
           <div className="flex gap-3 mt-2">
             <a
-              href="https://www.facebook.com"
+              href="http://www.linkedin.com/company/the-freelance-pm-club"
               target="_blank"
               className="text-blue-800"
             >
-              <FaFacebookF />
+              <FaLinkedin />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/thefreelancepm"
               target="_blank"
               className="text-blue-800"
             >
               <FaInstagram />
             </a>
             <a
-              href="https://www.youtube.com"
+              href="https://www.youtube.com/@thefreelancepm"
               target="_blank"
               className="text-blue-800"
             >
               <FaYoutube />
+            </a>
+            <a
+              href="https://www.tiktok.com/@thefreelancepm"
+              target="_blank"
+              className="text-blue-800"
+            >
+              <FaTiktok />
             </a>
           </div>
         </div>

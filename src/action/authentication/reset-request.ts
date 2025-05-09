@@ -1,7 +1,9 @@
 "use server";
 
 import { auth } from "@/auth";
+import OtpEmail from "@/email-templates/otp-share-template";
 import { prisma } from "@/lib/prisma";
+import { resend } from "@/lib/resend";
 import bcrypt from "bcryptjs";
 import { redirect } from "next/navigation";
 
@@ -41,14 +43,14 @@ export async function sendOtp(email: string) {
     });
 
     // Send OTP via email
-    // await resend.emails.send({
-    //   from: "FreelanceClub PM <monir@monirhrabby.com>",
-    //   to: [newReq.email as string],
-    //   subject: `Your Password Reset OTP: [${newReq.otp}]`,
-    //   react: OtpEmail({
-    //     otpCode: newReq.otp.toString(),
-    //   }),
-    // });
+    await resend.emails.send({
+      from: "FreelancePM Club <support@thefreelancepmclub.com>",
+      to: [newReq.email as string],
+      subject: `Your Password Reset OTP: [${newReq.otp}]`,
+      react: OtpEmail({
+        otpCode: newReq.otp.toString(),
+      }),
+    });
 
     return {
       success: true,

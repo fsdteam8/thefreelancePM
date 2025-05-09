@@ -74,7 +74,7 @@ export const MeetingInvite = ({
                 className="bg-blue-700 text-white font-medium py-2 px-6 rounded mt-4 text-center"
                 href={meetingLink}
               >
-                Join Google Meet
+                Join Zoom
               </Button>
             </Section>
 
@@ -97,9 +97,6 @@ export const MeetingInvite = ({
               <Text>
                 This is an automated invitation. Please do not reply to this
                 email.
-              </Text>
-              <Text>
-                If you have any questions, please contact {hostName} directly.
               </Text>
             </Section>
           </Container>

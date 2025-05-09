@@ -1,10 +1,12 @@
 "use server";
 
 import { auth } from "@/auth";
-import { getGrantInfo } from "@/helper/calendar";
+import MeetingInvite from "@/email-templates/meeting-invite";
 import { generateZoomMeeting } from "@/helper/zoom";
 import { prisma } from "@/lib/prisma";
+import { resend } from "@/lib/resend";
 import { parseISO, setHours, setMinutes } from "date-fns";
+import moment from "moment";
 import { revalidatePath } from "next/cache";
 
 export async function approveCoaching(coachingId: string) {
@@ -31,15 +33,6 @@ export async function approveCoaching(coachingId: string) {
   }
 
   const { date, time, firstName, lastName, email } = coaching;
-
-  const { grantEmail, grantId } = await getGrantInfo();
-
-  if (!grantEmail || !grantId) {
-    return {
-      success: false,
-      message: "Admin calendar credentials not found.",
-    };
-  }
 
   // Combine date and time, assume `date` and `time` are strings like '2025-05-02' and '14:00'
   const coachingDate =
@@ -71,17 +64,17 @@ export async function approveCoaching(coachingId: string) {
   const { startUrl, joinUrl, passcode } = zoom;
 
   // send email to user with meet link
-  // await resend.emails.send({
-  //   from: "FreelanceClub PM <monir@monirhrabby.com>",
-  //   to: [coaching.email as string],
-  //   subject: "Google Meet Invitation:  Discussion with Ashanti Johnson, PMP",
-  //   react: MeetingInvite({
-  //     meetingDate: moment(coaching.date).format("MMMM Do, YYYY"),
-  //     meetingTime: coaching.time,
-  //     meetingId: coaching.meetingCode || undefined,
-  //     meetingLink: coaching.meetingLink || undefined,
-  //   }),
-  // });
+  await resend.emails.send({
+    from: "FreelancePM Club  <support@thefreelancepmclub.com>",
+    to: [coaching.email as string],
+    subject: "Google Meet Invitation:  Discussion with Ashanti Johnson, PMP",
+    react: MeetingInvite({
+      meetingDate: moment(coaching.date).format("MMMM Do, YYYY"),
+      meetingTime: coaching.time,
+      meetingId: coaching.pass_code || undefined,
+      meetingLink: coaching.join_url || undefined,
+    }),
+  });
 
   // save meet link to coaching session
 

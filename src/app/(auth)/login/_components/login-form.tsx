@@ -79,9 +79,8 @@ export function LoginForm() {
                 <div className="relative">
                   <Input
                     {...field}
-                    placeholder="Enter your Full Name"
-                    type="text"
-                    autoComplete="name"
+                    placeholder="Enter your email"
+                    type="email"
                     className="border-primary border-[1px]  min-h-[45px] "
                     disabled={loading}
                     startIcon={Mail}

@@ -6,192 +6,241 @@ export const quizData = [
       "This quiz is designed to guide individuals toward the project manager role that fits their personality, skill set, and passions.",
     questions: [
       {
-        question: "When faced with a problem, you typically:",
+        question: "How do you prefer to approach problem-solving?",
         options: [
           {
             value: "A",
-            text: "Create a detailed plan with clear steps to solve it",
+            text: "Breaking down complex problems into clear steps and executing efficiently.",
           },
           {
             value: "B",
-            text: "Focus on understanding user needs and market fit",
+            text: "Analyzing customer needs and aligning solutions to meet their expectations.",
           },
           {
             value: "C",
-            text: "Analyze the supply chain and resource allocation",
+            text: "Finding innovative ways to optimize operations and logistics.",
           },
           {
             value: "D",
-            text: "Coordinate multiple teams to address the issue",
+            text: "Managing multiple projects while ensuring alignment with business goals.",
           },
           {
             value: "E",
-            text: "Think about how to position the solution in the market",
+            text: "Creating and executing strategies to build brand awareness.",
           },
           {
             value: "F",
-            text: "Consider how this affects customer satisfaction",
+            text: "Building and nurturing long-term relationships with clients.",
           },
           {
             value: "G",
-            text: "Facilitate team discussions to find the best solution",
+            text: "Facilitating collaboration and helping teams stay on track using Agile methods.",
           },
           {
             value: "H",
-            text: "Look for partnership opportunities to solve the problem",
+            text: "Identifying growth opportunities and developing strategic partnerships.",
           },
           {
             value: "I",
-            text: "Create materials to help the sales team understand the solution",
+            text: "Equipping sales teams with the tools, processes, and training they need to succeed.",
           },
         ],
       },
       {
-        question: "Which of these activities do you enjoy the most?",
-        options: [
-          { value: "A", text: "Creating schedules and tracking progress" },
-          { value: "B", text: "Defining product features and roadmaps" },
-          { value: "C", text: "Optimizing logistics and inventory management" },
-          { value: "D", text: "Managing interdependencies between projects" },
-          { value: "E", text: "Developing marketing campaigns and strategies" },
-          { value: "F", text: "Building relationships with customers" },
-          {
-            value: "G",
-            text: "Facilitating daily stand-ups and sprint planning",
-          },
-          { value: "H", text: "Identifying new business opportunities" },
-          {
-            value: "I",
-            text: "Creating training materials and sales collateral",
-          },
-        ],
-      },
-      {
-        question: "What's your approach to team management?",
+        question: "Which work environment excites you the most?",
         options: [
           {
             value: "A",
-            text: "I focus on clear roles, responsibilities, and deadlines",
+            text: "Organizing tasks and ensuring deliverables are met on time.",
           },
           {
             value: "B",
-            text: "I prioritize understanding customer needs and market trends",
+            text: "Collaborating with developers and designers to build great products.",
           },
           {
             value: "C",
-            text: "I emphasize efficient processes and resource utilization",
+            text: "Overseeing supply chains and ensuring smooth operational flow.",
           },
           {
             value: "D",
-            text: "I coordinate across multiple teams and projects",
+            text: "Managing cross-functional teams and high-level strategy execution.",
           },
           {
             value: "E",
-            text: "I align team efforts with brand positioning and market strategy",
+            text: "Running creative marketing campaigns and driving engagement.",
           },
           {
             value: "F",
-            text: "I ensure the team understands customer success metrics",
+            text: "Working closely with clients to ensure their success with a product or service.",
           },
           {
             value: "G",
-            text: "I remove impediments and facilitate team self-organization",
+            text: "Leading Agile ceremonies and guiding teams to improve processes.",
           },
           {
             value: "H",
-            text: "I focus on strategic partnerships and business growth",
+            text: "Engaging with external stakeholders to drive business growth.",
           },
           {
             value: "I",
-            text: "I bridge the gap between product development and sales",
+            text: "Supporting sales teams with data, processes, and enablement tools.",
           },
         ],
       },
       {
-        question: "Which tool would you be most excited to use daily?",
+        question: "What’s your biggest strength in a work setting?",
         options: [
           {
             value: "A",
-            text: "Microsoft Project or other project planning tools",
+            text: "Staying organized and ensuring projects stay on track.",
           },
-          { value: "B", text: "Product roadmap and user story mapping tools" },
-          {
-            value: "C",
-            text: "Inventory management and supply chain software",
-          },
-          {
-            value: "D",
-            text: "Portfolio management and resource allocation tools",
-          },
-          { value: "E", text: "Marketing automation and analytics platforms" },
-          { value: "F", text: "CRM systems and customer feedback tools" },
-          { value: "G", text: "Jira, Trello, or other agile management tools" },
-          { value: "H", text: "CRM and business intelligence tools" },
-          {
-            value: "I",
-            text: "Sales enablement platforms and content management systems",
-          },
-        ],
-      },
-      {
-        question: "If you could solve one problem, what would it be?",
-        options: [
-          { value: "A", text: "Delivering projects on time and within budget" },
-          { value: "B", text: "Creating products that truly meet user needs" },
-          { value: "C", text: "Optimizing supply chains for efficiency" },
-          {
-            value: "D",
-            text: "Aligning multiple projects toward strategic goals",
-          },
-          {
-            value: "E",
-            text: "Building strong brand recognition in the market",
-          },
-          { value: "F", text: "Improving customer retention and satisfaction" },
-          {
-            value: "G",
-            text: "Helping teams become more agile and responsive",
-          },
-          {
-            value: "H",
-            text: "Identifying and capturing new market opportunities",
-          },
-          {
-            value: "I",
-            text: "Equipping sales teams with better tools and knowledge",
-          },
-        ],
-      },
-      {
-        question: "What aspect of your work do you find most rewarding?",
-        options: [
-          { value: "A", text: "Seeing a project completed successfully" },
           {
             value: "B",
-            text: "Watching users engage with a product you designed",
+            text: "Understanding customer needs and delivering valuable solutions.",
           },
           {
             value: "C",
-            text: "Creating efficient systems that save time and money",
+            text: "Optimizing efficiency and streamlining processes.",
           },
-          { value: "D", text: "Successfully coordinating complex initiatives" },
+          {
+            value: "D",
+            text: "Managing multiple initiatives while keeping a strategic vision.",
+          },
           {
             value: "E",
-            text: "Seeing marketing campaigns drive business results",
+            text: "Creativity and storytelling to drive brand messaging.",
           },
           {
             value: "F",
-            text: "Receiving positive feedback from satisfied customers",
+            text: "Building relationships and keeping clients engaged.",
           },
           {
             value: "G",
-            text: "Witnessing a team improve their agile practices",
+            text: "Facilitating team collaboration and problem-solving.",
           },
           {
             value: "H",
-            text: "Closing deals and growing business relationships",
+            text: "Negotiation and deal-making to drive business expansion.",
           },
-          { value: "I", text: "Helping sales teams exceed their targets" },
+          {
+            value: "I",
+            text: "Training and supporting teams with the right tools and insights.",
+          },
+        ],
+      },
+      {
+        question: "What type of challenges do you enjoy solving the most?",
+        options: [
+          {
+            value: "A",
+            text: "Keeping teams aligned and projects running smoothly.",
+          },
+          {
+            value: "B",
+            text: "Building products that solve real customer problems.",
+          },
+          {
+            value: "C",
+            text: "Making supply chains and logistics more efficient.",
+          },
+          {
+            value: "D",
+            text: "Managing large-scale programs with multiple moving parts.",
+          },
+          { value: "E", text: "Creating compelling marketing strategies." },
+          {
+            value: "F",
+            text: "Helping customers achieve their goals with a product/service.",
+          },
+          {
+            value: "G",
+            text: "Removing roadblocks for teams and improving workflows.",
+          },
+          {
+            value: "H",
+            text: "Expanding business opportunities and partnerships.",
+          },
+          {
+            value: "I",
+            text: "Enabling sales teams to close more deals effectively.",
+          },
+        ],
+      },
+      {
+        question:
+          "If you had to pick one, which statement resonates most with you?",
+        options: [
+          {
+            value: "A",
+            text: "I love structure and ensuring things get done on time.",
+          },
+          {
+            value: "B",
+            text: "I’m passionate about creating and improving products.",
+          },
+          {
+            value: "C",
+            text: "I thrive in operational efficiency and logistics.",
+          },
+          {
+            value: "D",
+            text: "I enjoy overseeing multiple initiatives at once.",
+          },
+          { value: "E", text: "Marketing strategy and branding excite me." },
+          { value: "F", text: "Helping clients succeed is my priority." },
+          {
+            value: "G",
+            text: "I love Agile, teamwork, and continuous improvement.",
+          },
+          {
+            value: "H",
+            text: "I enjoy building partnerships and business growth strategies.",
+          },
+          {
+            value: "I",
+            text: "I excel at supporting sales teams with the tools and insights they need.",
+          },
+        ],
+      },
+      {
+        question: "What kind of impact do you want to make in your career?",
+        options: [
+          {
+            value: "A",
+            text: "Ensuring successful project execution across industries.",
+          },
+          {
+            value: "B",
+            text: "Driving product innovation and solving customer pain points.",
+          },
+          {
+            value: "C",
+            text: "Creating smooth and efficient supply chain operations.",
+          },
+          {
+            value: "D",
+            text: "Leading large-scale programs that drive organizational success.",
+          },
+          {
+            value: "E",
+            text: "Building powerful marketing strategies that influence audiences.",
+          },
+          {
+            value: "F",
+            text: "Delivering outstanding client experiences and fostering loyalty.",
+          },
+          {
+            value: "G",
+            text: "Helping teams work better together and improve processes.",
+          },
+          {
+            value: "H",
+            text: "Growing business partnerships and revenue streams.",
+          },
+          {
+            value: "I",
+            text: "Enabling sales teams to perform at their highest potential.",
+          },
         ],
       },
     ],
@@ -510,7 +559,7 @@ export const quizData = [
         ],
       },
       {
-        question: "What's your approach to learning and growth?",
+        question: "What’s your approach to learning and growth?",
         options: [
           {
             value: "A",
@@ -588,12 +637,12 @@ export const quizData = [
         ],
       },
       {
-        question: "What's your ideal pace of work?",
+        question: "What’s your ideal pace of work?",
         options: [
           { value: "A", text: "Fast-moving and tech-driven" },
           {
             value: "B",
-            text: "Methodical with a focus on people's well-being",
+            text: "Methodical with a focus on people’s well-being",
           },
           { value: "C", text: "Highly analytical with data-driven strategies" },
           {
@@ -625,14 +674,14 @@ export const quizData = [
       {
         question: "If you could work for any company, which would it be?",
         options: [
-          { value: "A", text: "Google, Microsoft, or Amazon Tech" },
-          { value: "B", text: "Mayo Clinic, WHO, or CDC Healthcare" },
-          { value: "C", text: "Goldman Sachs, JPMorgan, or PayPal Finance" },
+          { value: "A", text: "Google, Microsoft, or Amazon (Tech)" },
+          { value: "B", text: "Mayo Clinic, WHO, or CDC (Healthcare)" },
+          { value: "C", text: "Goldman Sachs, JPMorgan, or PayPal (Finance)" },
           {
             value: "D",
-            text: "Tesla, Bechtel, or Caterpillar Engineering/Manufacturing",
+            text: "Tesla, Bechtel, or Caterpillar (Engineering/Manufacturing)",
           },
-          { value: "E", text: "Nike, Disney, or Ogilvy Marketing & Media" },
+          { value: "E", text: "Nike, Disney, or Ogilvy (Marketing & Media)" },
         ],
       },
       {
@@ -655,7 +704,7 @@ export const quizData = [
         ],
       },
       {
-        question: "What's your favorite type of challenge?",
+        question: "What’s your favorite type of challenge?",
         options: [
           { value: "A", text: "Solving complex tech problems" },
           {
@@ -685,7 +734,7 @@ export const quizData = [
   {
     id: "certification-match",
     title:
-      "Get Certified! Determine what project management certification is right for you!",
+      "Get Certified! Determine what project management certification is right for you",
     description:
       "This quiz is designed to help project managers determine the best certification based on their background, experience, and industry.",
     questions: [
@@ -795,3 +844,5 @@ export const quizData = [
     ],
   },
 ];
+
+// https://chat.qwen.ai/s/15f23afb-9934-4d15-a72c-645af0484fe2?fev=0.0.87

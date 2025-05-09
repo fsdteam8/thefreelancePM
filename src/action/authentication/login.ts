@@ -31,10 +31,18 @@ export async function loginAction(data: LoginFormValues) {
     };
   }
 
+  if (!user.emailVerified) {
+    return {
+      success: false,
+      message:
+        "Your email is not verified. Please check your inbox and verify your email address before logging in.",
+    };
+  }
+
   // Verify the password
   const isPasswordValid = await bcrypt.compare(
     parsedData.password as string,
-    user.password
+    user.password,
   );
 
   if (!isPasswordValid) {
@@ -55,7 +63,7 @@ export async function loginAction(data: LoginFormValues) {
     await manageRememberMeCookies(
       !!data.rememberMe,
       data.rememberMe ? data.email : undefined,
-      data.rememberMe ? data.password : undefined
+      data.rememberMe ? data.password : undefined,
     );
 
     return {
@@ -84,7 +92,7 @@ export async function loginAction(data: LoginFormValues) {
 export async function manageRememberMeCookies(
   rememberMe: boolean,
   email?: string,
-  password?: string
+  password?: string,
 ) {
   const cookieOptions = {
     sameSite: "strict" as const, // Prevents the cookie from being sent with cross-site requests
