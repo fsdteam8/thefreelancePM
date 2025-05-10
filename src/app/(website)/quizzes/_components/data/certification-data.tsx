@@ -7,6 +7,7 @@ export type Certification = {
   idealFor: string;
   prerequisites: string[];
   industries: string[];
+  url?: string;
 };
 
 export const certificationData: Record<
@@ -37,6 +38,7 @@ export const certificationData: Record<
           "Hospitality & Tourism",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.coursera.org/professional-certificates/google-project-management?utm_medium=sem&utm_source=gg&utm_campaign=b2c_namer_google-project-management_google_ftcof_professional-certificates_px_dr_bau_gg_sem_pr-bd_us_en_m_hyb_24-05_x&campaignid=12507120706&adgroupid=138976596210&device=c&keyword=&matchtype=&network=g&devicemodel=&creativeid=636584713408&assetgroupid=&targetid=aud-303020828629:dsa-1903279393350&extensionid=&placement=&gad_source=1&gbraid=0AAAAADdKX6ZU3gRBZB9xTQ8kCrXJveK_-&gclid=CjwKCAjwq7fABhB2EiwAwk-YbK0DezRVKRYr-ynlDYRcM5og6GBjjgZGxyAFH7sG7wYNEp-lFJ-8-RoC6fEQAvD_BwE",
       },
       {
         id: "agilepm",
@@ -53,6 +55,81 @@ export const certificationData: Record<
           "Technology (IT & Software Development)",
           "Telecommunications",
         ],
+        url: "https://apmg-international.com/product/agile-project-management-agilepmr-certification",
+      },
+      {
+        id: "csm",
+        name: "Certified ScrumMaster (CSM)",
+        description:
+          "The CSM certification focuses on Scrum methodology, which is used in Agile project management. This certification is ideal for those looking to become Scrum Masters or work within Agile project teams, ensuring effective Scrum practices for project delivery.",
+        idealFor:
+          "Those interested in working in Agile environments or teams using Scrum.",
+        prerequisites: [
+          "No formal prerequisites",
+          "Must attend a two-day (16-hour) CSM training from a Scrum Alliance-certified trainer",
+        ],
+        industries: [
+          "Technology (IT & Software Development)",
+          "Telecommunications",
+        ],
+        url: "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster",
+      },
+      {
+        id: "psm",
+        name: "Professional Scrum Master (PSM I, II, III)",
+        description:
+          "PSM certification is a series of progressive levels (I, II, III) for Scrum Masters, starting with the basics of Scrum to advanced understanding of Scrum principles, practices, and leadership. It is ideal for those who want to grow as Agile leaders and ensure Scrum practices are effectively implemented in their teams.",
+        idealFor:
+          "Scrum professionals looking to deepen their knowledge and expertise in Agile project management.",
+        prerequisites: [
+          "No formal prerequisites",
+          "Self-study or training recommended",
+          "PSM II requires passing PSM I",
+          "PSM III requires passing PSM II",
+          "Higher levels require deeper Scrum mastery",
+        ],
+        industries: [
+          "Technology (IT & Software Development)",
+          "Telecommunications",
+        ],
+        url: "https://www.scrum.org/professional-scrum-certifications/professional-scrum-master-assessments",
+      },
+      {
+        id: "itil4",
+        name: "ITIL 4 Foundation Certification",
+        description:
+          "ITIL 4 Foundation certification provides an understanding of the ITIL framework, which focuses on aligning IT services with business needs. Ideal for IT professionals who want to manage and improve service delivery processes in a structured and strategic way.",
+        idealFor:
+          "IT professionals involved in service management, IT teams, and those in IT project management roles.",
+        prerequisites: [
+          "No prerequisites",
+          "Suitable for IT professionals, project managers, and service managers",
+        ],
+        industries: [
+          "Technology (IT & Software Development)",
+          "Telecommunications",
+        ],
+        url: "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation",
+      },
+      {
+        id: "cpm",
+        name: "Certified Project Manager (CPM)",
+        description:
+          "The CPM certification from IAPM is designed to establish competence in core project management principles. It is suitable for those entering project management roles or looking to formalize their project management knowledge.",
+        idealFor:
+          "Professionals with or without prior project management experience who want to enhance their credentials.",
+        prerequisites: [
+          "No formal prerequisites",
+          "Training recommended but not required",
+        ],
+        industries: [
+          "Technology (IT & Software Development)",
+          "Finance & Banking",
+          "Construction & Engineering",
+          "Healthcare",
+          "Marketing & Advertising",
+        ],
+        url: "https://www.iapm.net/en/certification/levels-of-certification/certified-project-manager-iapm/",
       },
     ],
     healthcare: [
@@ -82,6 +159,7 @@ export const certificationData: Record<
           "Automotive & Aerospace",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.pmi.org/certifications/certified-associate-capm",
       },
       {
         id: "ccpm",
@@ -95,6 +173,7 @@ export const certificationData: Record<
           "Clinical research or project management experience recommended",
         ],
         industries: ["Healthcare", "Pharmaceuticals & Biotechnology"],
+        url: "https://charteredcertifications.com/learning/courses/ccrp",
       },
     ],
     finance: [
@@ -124,7 +203,9 @@ export const certificationData: Record<
           "Automotive & Aerospace",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.pmi.org/certifications/certified-associate-capm",
       },
+
       {
         id: "prince2",
         name: "PRINCE2 Foundation",
@@ -145,6 +226,7 @@ export const certificationData: Record<
           "Nonprofit & Social Impact",
           "Hospitality & Tourism",
         ],
+        url: "https://www.prince2.com/usa/prince2/foundation",
       },
     ],
     construction: [
@@ -174,6 +256,7 @@ export const certificationData: Record<
           "Automotive & Aerospace",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.pmi.org/certifications/certified-associate-capm",
       },
       {
         id: "ccm",
@@ -186,6 +269,7 @@ export const certificationData: Record<
           "Eight years of experience with no degree",
         ],
         industries: ["Construction & Engineering"],
+        url: "https://www.cmaanet.org/certification/ccm",
       },
     ],
     marketing: [
@@ -211,6 +295,7 @@ export const certificationData: Record<
           "Hospitality & Tourism",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.coursera.org/professional-certificates/google-project-management?utm_medium=sem&utm_source=gg&utm_campaign=b2c_namer_google-project-management_google_ftcof_professional-certificates_px_dr_bau_gg_sem_pr-bd_us_en_m_hyb_24-05_x&campaignid=12507120706&adgroupid=138976596210&device=c&keyword=&matchtype=&network=g&devicemodel=&creativeid=636584713408&assetgroupid=&targetid=aud-303020828629:dsa-1903279393350&extensionid=&placement=&gad_source=1&gbraid=0AAAAADdKX6ZU3gRBZB9xTQ8kCrXJveK_-&gclid=CjwKCAjwq7fABhB2EiwAwk-YbK0DezRVKRYr-ynlDYRcM5og6GBjjgZGxyAFH7sG7wYNEp-lFJ-8-RoC6fEQAvD_BwE",
       },
       {
         id: "prince2",
@@ -232,6 +317,7 @@ export const certificationData: Record<
           "Nonprofit & Social Impact",
           "Hospitality & Tourism",
         ],
+        url: "https://www.prince2.com/usa/prince2/foundation",
       },
     ],
     ecommerce: [
@@ -257,6 +343,7 @@ export const certificationData: Record<
           "Hospitality & Tourism",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.coursera.org/professional-certificates/google-project-management?utm_medium=sem&utm_source=gg&utm_campaign=b2c_namer_google-project-management_google_ftcof_professional-certificates_px_dr_bau_gg_sem_pr-bd_us_en_m_hyb_24-05_x&campaignid=12507120706&adgroupid=138976596210&device=c&keyword=&matchtype=&network=g&devicemodel=&creativeid=636584713408&assetgroupid=&targetid=aud-303020828629:dsa-1903279393350&extensionid=&placement=&gad_source=1&gbraid=0AAAAADdKX6ZU3gRBZB9xTQ8kCrXJveK_-&gclid=CjwKCAjwq7fABhB2EiwAwk-YbK0DezRVKRYr-ynlDYRcM5og6GBjjgZGxyAFH7sG7wYNEp-lFJ-8-RoC6fEQAvD_BwE",
       },
       {
         id: "capm",
@@ -284,6 +371,7 @@ export const certificationData: Record<
           "Automotive & Aerospace",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.pmi.org/certifications/certified-associate-capm",
       },
     ],
     telecommunications: [
@@ -309,6 +397,7 @@ export const certificationData: Record<
           "Hospitality & Tourism",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.coursera.org/professional-certificates/google-project-management?utm_medium=sem&utm_source=gg&utm_campaign=b2c_namer_google-project-management_google_ftcof_professional-certificates_px_dr_bau_gg_sem_pr-bd_us_en_m_hyb_24-05_x&campaignid=12507120706&adgroupid=138976596210&device=c&keyword=&matchtype=&network=g&devicemodel=&creativeid=636584713408&assetgroupid=&targetid=aud-303020828629:dsa-1903279393350&extensionid=&placement=&gad_source=1&gbraid=0AAAAADdKX6ZU3gRBZB9xTQ8kCrXJveK_-&gclid=CjwKCAjwq7fABhB2EiwAwk-YbK0DezRVKRYr-ynlDYRcM5og6GBjjgZGxyAFH7sG7wYNEp-lFJ-8-RoC6fEQAvD_BwE",
       },
       {
         id: "agilepm",
@@ -325,6 +414,7 @@ export const certificationData: Record<
           "Technology (IT & Software Development)",
           "Telecommunications",
         ],
+        url: "https://apmg-international.com/product/agile-project-management-agilepmr-certification",
       },
     ],
     manufacturing: [
@@ -354,6 +444,7 @@ export const certificationData: Record<
           "Automotive & Aerospace",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.pmi.org/certifications/certified-associate-capm",
       },
       {
         id: "lssgb",
@@ -375,6 +466,7 @@ export const certificationData: Record<
           "Hospitality & Tourism",
           "Agriculture & Food Industry",
         ],
+        url: "https://iassc.org/six-sigma-certification/green-belt-certification/",
       },
     ],
     // Add more industries and their certifications as needed
@@ -413,6 +505,7 @@ export const certificationData: Record<
           "Hospitality & Tourism",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.pmi.org/certifications/project-management-pmp",
       },
       {
         id: "pmi-acp",
@@ -434,6 +527,7 @@ export const certificationData: Record<
           "Nonprofit & Social Impact",
           "Entertainment & Media",
         ],
+        url: "https://www.pmi.org/certifications/agile-certifications",
       },
     ],
     // Add more industries and their certifications for mid-level
@@ -552,3 +646,5 @@ export function getRecommendedCertifications(
 
   return filteredRecommendations;
 }
+
+// Lean Six Sigma Black Belt

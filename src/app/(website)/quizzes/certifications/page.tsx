@@ -84,7 +84,9 @@ export default function CertificationsPage() {
               className="bg-white h-auto rounded-lg shadow-md border border-[#D5D5D5] overflow-hidden"
             >
               <div className="p-6">
-                <h2 className="text-3xl font-semibold text-[#000000] mb-[30px]">{cert.name}</h2>
+                <h2 className="text-3xl font-semibold text-[#000000] mb-[30px]">
+                  {cert.name}
+                </h2>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {cert.industries.map((ind) => (
@@ -97,12 +99,18 @@ export default function CertificationsPage() {
                   ))}
                 </div>
 
-                <p className="font-medium mb-4 text-[18px] text-[#333333]">Ideal for: {cert.idealFor}</p>
+                <p className="font-medium mb-4 text-[18px] text-[#333333]">
+                  Ideal for: {cert.idealFor}
+                </p>
 
-                <p className="text-[#333333] font-normal text-sm mb-4">{cert.description}</p>
+                <p className="text-[#333333] font-normal text-sm mb-4">
+                  {cert.description}
+                </p>
 
                 <div className="mb-4">
-                  <h3 className="font-normal mb-2 text-sm text-[#333333]">Prerequisites:</h3>
+                  <h3 className="font-normal mb-2 text-sm text-[#333333]">
+                    Prerequisites:
+                  </h3>
                   <ul className="list-disc pl-5 ">
                     {cert.prerequisites.map((prereq, index) => (
                       <li key={index} className="text-gray-700 text-sm">
@@ -114,8 +122,13 @@ export default function CertificationsPage() {
               </div>
 
               <div className="px-6 pb-11">
-                <Button className="w-full bg-[#004AAD] py-3 hover:bg-blue-700">
-                  Learn More
+                <Button
+                  className="w-full bg-[#004AAD] py-3 hover:bg-blue-700"
+                  asChild
+                >
+                  <a href={cert.url} className="w-full" target="_blank">
+                    Learn More
+                  </a>
                 </Button>
               </div>
             </div>
@@ -133,6 +146,6 @@ export default function CertificationsPage() {
           </Link>
         </div> */}
       </div>
-      </>
+    </>
   );
 }
