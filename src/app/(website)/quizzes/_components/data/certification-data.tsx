@@ -530,7 +530,69 @@ export const certificationData: Record<
         url: "https://www.pmi.org/certifications/agile-certifications",
       },
     ],
-    // Add more industries and their certifications for mid-level
+    manufacturing: [
+      {
+        id: "lssbb",
+        name: "Lean Six Sigma Black Belt",
+        description:
+          "Lean Six Sigma Black Belt certification demonstrates advanced knowledge of Six Sigma methodologies and tools for leading process improvement projects. Black Belts typically lead project teams and serve as experts in data-driven decision-making, process optimization, and organizational efficiency.",
+        idealFor:
+          "Experienced professionals leading process improvement projects and managing teams in quality-focused roles.",
+        prerequisites: [
+          "Typically requires completion of Lean Six Sigma Green Belt certification",
+          "Experience leading or supporting Six Sigma projects is recommended",
+          "Training or coursework in Six Sigma principles usually required",
+        ],
+        industries: [
+          "Manufacturing",
+          "Healthcare",
+          "Technology (IT & Software Development)",
+          "Finance & Banking",
+          "Supply Chain & Logistics",
+        ],
+        url: "https://iassc.org/six-sigma-certification/black-belt-certification",
+      },
+    ],
+    cybersecurity: [
+      {
+        id: "cspm",
+        name: "Certified Security Project Manager (CSPM)",
+        description:
+          "The CSPM certification is designed for professionals managing security projects, particularly those involving physical and electronic security systems. It demonstrates expertise in managing scope, budgets, timelines, and stakeholders within security-focused environments.",
+        idealFor:
+          "Security professionals and project managers overseeing physical or electronic security projects.",
+        prerequisites: [
+          "Minimum 6,000 hours of hands-on security project management experience within the last 10 years",
+          "Security Industry Association (SIA) approval to sit for the exam",
+        ],
+        industries: [
+          "Cybersecurity",
+          "Construction & Engineering",
+          "Government & Public Sector",
+        ],
+        url: "https://www.securityindustry.org/professional-development/cspm-certification",
+      },
+    ],
+    finance: [
+      {
+        id: "pmi-rmp",
+        name: "Risk Management Professional (PMI-RMP)®",
+        description:
+          "The PMI-RMP certification is for project managers who specialize in risk management. It demonstrates the ability to identify, assess, and manage risks in projects, making it ideal for professionals who work in high-risk industries or complex projects.",
+        idealFor:
+          "Project managers focused on identifying and managing project risks.",
+        prerequisites: [
+          "Bachelor’s degree + 24 months risk management experience + 30 hours risk management education OR",
+          "High school diploma + 36 months risk management experience + 40 hours risk management education",
+        ],
+        industries: [
+          "Finance & Banking",
+          "Cybersecurity",
+          "Energy & Utilities",
+        ],
+        url: "https://www.pmi.org/certifications/risk-management-rmp",
+      },
+    ],
   },
   senior: {
     technology: [
@@ -559,6 +621,7 @@ export const certificationData: Record<
           "Entertainment & Media",
           "Agriculture & Food Industry",
         ],
+        url: "https://www.pmi.org/certifications/portfolio-management-pfmp",
       },
       {
         id: "safe",
@@ -576,6 +639,126 @@ export const certificationData: Record<
           "Technology (IT & Software Development)",
           "Telecommunications",
         ],
+        url: "https://scaledagile.com/training/leading-safe",
+      },
+    ],
+    marketing: [
+      {
+        id: "cpd",
+        name: "Certified Project Director (CPD)",
+        description:
+          "The CPD certification is for experienced project managers who have advanced project management skills. It validates the ability to oversee and direct large, complex projects and programs across various industries, focusing on leadership and strategic alignment.",
+        idealFor:
+          "Senior-level project managers with leadership and strategic oversight responsibilities.",
+        prerequisites: [
+          "Must have PMP, PRINCE2, or equivalent",
+          "5+ years of project management experience",
+        ],
+        industries: [
+          "Marketing & Advertising",
+          "Government & Public Sector",
+          "Real Estate & Property Management",
+          "Education & E-learning",
+          "Energy & Utilities",
+          "Automotive & Aerospace",
+          "Nonprofit & Social Impact",
+          "Entertainment & Media",
+          "Hospitality & Tourism",
+          "Agriculture & Food Industry",
+        ],
+        url: "https://gaqm.org/certifications/project_management/cpd",
+      },
+      {
+        id: "pgmp",
+        name: "Program Management Professional (PgMP)®",
+        description:
+          "The PgMP certification demonstrates expertise in managing complex programs. It is ideal for professionals who oversee and coordinate multiple projects that align with strategic business objectives.",
+        idealFor:
+          "Experienced program managers overseeing multiple related projects.",
+        prerequisites: [
+          "Bachelor’s degree + 48 months project management experience + 48 months program management experience OR",
+          "High school diploma + 48 months project management experience + 84 months program management experience",
+        ],
+        industries: [
+          "Healthcare",
+          "Construction & Engineering",
+          "Marketing & Advertising",
+          "Telecommunications",
+          "Education & E-learning",
+          "Energy & Utilities",
+          "Transportation & Logistics",
+          "Nonprofit & Social Impact",
+          "Hospitality & Tourism",
+          "Agriculture & Food Industry",
+        ],
+        url: "https://www.pmi.org/certifications/program-management-pgmp",
+      },
+    ],
+    healthcare: [
+      {
+        id: "pgmp",
+        name: "Program Management Professional (PgMP)®",
+        description:
+          "The PgMP certification demonstrates expertise in managing complex programs. It is ideal for professionals who oversee and coordinate multiple projects that align with strategic business objectives.",
+        idealFor:
+          "Experienced program managers overseeing multiple related projects.",
+        prerequisites: [
+          "Bachelor’s degree + 48 months project management experience + 48 months program management experience OR",
+          "High school diploma + 48 months project management experience + 84 months program management experience",
+        ],
+        industries: [
+          "Healthcare",
+          "Construction & Engineering",
+          "Marketing & Advertising",
+          "Telecommunications",
+          "Education & E-learning",
+          "Energy & Utilities",
+          "Transportation & Logistics",
+          "Nonprofit & Social Impact",
+          "Hospitality & Tourism",
+          "Agriculture & Food Industry",
+        ],
+        url: "https://www.pmi.org/certifications/program-management-pgmp",
+      },
+    ],
+    finance: [
+      {
+        id: "pmi-rmp",
+        name: "Risk Management Professional (PMI-RMP)®",
+        description:
+          "The PMI-RMP certification is for project managers who specialize in risk management. It demonstrates the ability to identify, assess, and manage risks in projects, making it ideal for professionals who work in high-risk industries or complex projects.",
+        idealFor:
+          "Project managers focused on identifying and managing project risks.",
+        prerequisites: [
+          "Bachelor’s degree + 24 months risk management experience + 30 hours risk management education OR",
+          "High school diploma + 36 months risk management experience + 40 hours risk management education",
+        ],
+        industries: [
+          "Finance & Banking",
+          "Cybersecurity",
+          "Energy & Utilities",
+        ],
+        url: "https://www.pmi.org/certifications/risk-management-rmp",
+      },
+    ],
+    cybersecurity: [
+      {
+        id: "pmi-rmp",
+        name: "Risk Management Professional (PMI-RMP)®",
+        description:
+          "The PMI-RMP certification is for project managers who specialize in risk management. It demonstrates the ability to identify, assess, and manage risks in projects, making it ideal for professionals who work in high-risk industries or complex projects.",
+        idealFor:
+          "Project managers focused on identifying and managing project risks.",
+        prerequisites: [
+          "Bachelor’s degree + 24 months risk management experience + 30 hours risk management education OR",
+          "High school diploma + 36 months risk management experience + 40 hours risk management education",
+        ],
+        industries: [
+          "Finance & Banking",
+          "Cybersecurity",
+          "Energy & Utilities",
+        ],
+        url: "https://www.pmi.org/certifications/risk-management-rmp",
       },
     ],
     // Add more industries and their certifications for senior-level
@@ -646,7 +829,5 @@ export function getRecommendedCertifications(
 
   return filteredRecommendations;
 }
-
-// Lean Six Sigma Black Belt
 
 // https://chatgpt.com/share/681edf1f-da88-8012-840c-7db83dddb7a2

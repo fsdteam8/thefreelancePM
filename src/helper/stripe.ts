@@ -11,7 +11,7 @@ export async function getSavedCards(userId: string) {
   });
 
   if (!user?.stripeCustomerId) {
-    throw new Error("No Stripe customer found.");
+    return [];
   }
 
   const paymentMethods = await stripe.customers.listPaymentMethods(
