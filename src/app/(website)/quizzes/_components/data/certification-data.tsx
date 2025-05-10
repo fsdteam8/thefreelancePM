@@ -648,3 +648,5 @@ export function getRecommendedCertifications(
 }
 
 // Lean Six Sigma Black Belt
+
+// https://chatgpt.com/share/681edf1f-da88-8012-840c-7db83dddb7a2
