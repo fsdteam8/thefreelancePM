@@ -29,7 +29,7 @@ export async function handleSubscriptionCheckout(
   // Define features per plan
   const features = [];
   switch (planId) {
-    case process.env.free_plan_id: // Free
+    case process.env.NEXT_PUBLIC_FREE_PLAN_ID: // Free
       features.push(
         {
           name: "templates",
@@ -41,7 +41,7 @@ export async function handleSubscriptionCheckout(
         { name: "courses", total: 1, remaining: 1, value: 5000, enabled: null },
       );
       break;
-    case process.env.pro_plan_id: // Pro
+    case process.env.NEXT_PUBLIC_PRO_PLAN_ID: // Pro
       features.push(
         {
           name: "templates",
@@ -81,7 +81,7 @@ export async function handleSubscriptionCheckout(
         },
       );
       break;
-    case process.env.elite_plan_id: // Elite
+    case process.env.NEXT_PUBLIC_ELITE_PLAN_ID: // Elite
       features.push(
         {
           name: "templates",

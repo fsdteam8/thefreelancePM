@@ -3,11 +3,15 @@
 import { prisma } from "@/lib/prisma";
 import { Feature, FeatureName } from "@prisma/client";
 
+const freePlanId = process.env.NEXT_PUBLIC_FREE_PLAN_ID!;
+const proPlanId = process.env.NEXT_PUBLIC_PRO_PLAN_ID!;
+const elitePlanId = process.env.NEXT_PUBLIC_ELITE_PLAN_ID!;
+
 // Map Stripe Subscription IDs to tier labels
 export const tierModel = {
-  "68183cb81ba9897a815d627d": "free",
-  "68183ce51ba9897a815d627e": "pro",
-  "68183d161ba9897a815d627f": "elite",
+  [freePlanId]: "free",
+  [proPlanId]: "pro",
+  [elitePlanId]: "elite",
 };
 
 export default async function getSubscriptionById(id: string) {

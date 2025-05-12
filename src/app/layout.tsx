@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "The FreelancePM offers expert freelance project management service to help your team deliver on time and within budget.",
   keywords: [
-    "freelance project manager",
+    "freelance project managers",
     "project management services",
     "remote project manager",
     "freelance PM for startups",
