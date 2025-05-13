@@ -187,7 +187,7 @@ export default function ResultsPage() {
           </div>
 
           <div className="mt-8 text-center">
-            <Link href="/">
+            <Link href="/quizzes">
               <Button className="bg-blue-600 hover:bg-blue-700">
                 Take Another Quiz
               </Button>

@@ -3,7 +3,7 @@ export const quizData = [
     id: "ultimate-pm-role",
     title: "The Ultimate PM Role Quiz - Where Do You Belong?",
     description:
-      "This quiz is designed to guide individuals toward the project manager role that fits their personality, skill set, and passions.",
+      "This quiz is designed to guide individuals toward the project management role that fits their personality, skill set, and passions.",
     questions: [
       {
         question: "How do you prefer to approach problem-solving?",
@@ -172,33 +172,33 @@ export const quizData = [
         options: [
           {
             value: "A",
-            text: "I love structure and ensuring things get done on time.",
+            text: `"I love structure and ensuring things get done on time."`,
           },
           {
             value: "B",
-            text: "I’m passionate about creating and improving products.",
+            text: `"I’m passionate about creating and improving products."`,
           },
           {
             value: "C",
-            text: "I thrive in operational efficiency and logistics.",
+            text: `"I thrive in operational efficiency and logistics."`,
           },
           {
             value: "D",
-            text: "I enjoy overseeing multiple initiatives at once.",
+            text: `"I enjoy overseeing multiple initiatives at once."`,
           },
-          { value: "E", text: "Marketing strategy and branding excite me." },
-          { value: "F", text: "Helping clients succeed is my priority." },
+          { value: "E", text: `"Marketing strategy and branding excite me."` },
+          { value: "F", text: `"Helping clients succeed is my priority."` },
           {
             value: "G",
-            text: "I love Agile, teamwork, and continuous improvement.",
+            text: `"I love Agile, teamwork, and continuous improvement."`,
           },
           {
             value: "H",
-            text: "I enjoy building partnerships and business growth strategies.",
+            text: `"I enjoy building partnerships and business growth strategies."`,
           },
           {
             value: "I",
-            text: "I excel at supporting sales teams with the tools and insights they need.",
+            text: `"I excel at supporting sales teams with the tools and insights they need."`,
           },
         ],
       },
@@ -674,14 +674,13 @@ export const quizData = [
       {
         question: "If you could work for any company, which would it be?",
         options: [
-          { value: "A", text: "Google, Microsoft, or Amazon (Tech)" },
-          { value: "B", text: "Mayo Clinic, WHO, or CDC (Healthcare)" },
-          { value: "C", text: "Goldman Sachs, JPMorgan, or PayPal (Finance)" },
+          { value: "A", text: "Google, Microsoft, or Amazon" },
+          { value: "B", text: "Mayo Clinic, WHO, or CDC" },
+          { value: "C", text: "Goldman Sachs, JPMorgan, or PayPal" },
           {
             value: "D",
-            text: "Tesla, Bechtel, or Caterpillar (Engineering/Manufacturing)",
+            text: "Tesla, Bechtel, or Caterpillar  Nike, Disney, or Ogilvy",
           },
-          { value: "E", text: "Nike, Disney, or Ogilvy (Marketing & Media)" },
         ],
       },
       {
@@ -734,7 +733,7 @@ export const quizData = [
   {
     id: "certification-match",
     title:
-      "Get Certified! Determine what project management certification is right for you",
+      "Get Certified! Determine what project management certification is right for you!",
     description:
       "This quiz is designed to help project managers determine the best certification based on their background, experience, and industry.",
     questions: [
@@ -760,12 +759,14 @@ export const quizData = [
           { value: "cpm", text: "Certified Project Manager (CPM)" },
           { value: "pmits", text: "Project Management in IT Security (PMITS)" },
           { value: "ccm", text: "Certified Construction Manager (CCM)" },
-          { value: "ccpm", text: "Certified Clinical Project Manager (CCPM)" },
-          { value: "lssgb", text: "Lean Six Sigma Green Belt" },
-          { value: "lssbb", text: "Lean Six Sigma Black Belt" },
           {
-            value: "cispm",
-            text: "Certified Information Systems Project Manager (CISPM)",
+            value: "ccrp",
+            text: "Certified Clinical Research Project Manager (CCRP)",
+          },
+          { value: "lssgbbb", text: "Lean Six Sigma Green Belt / Black Belt" },
+          {
+            value: "cspm",
+            text: "Certified Security Project Manager (CSPM)",
           },
           { value: "safe", text: "SAFe Agilist (SA)" },
           { value: "cpd", text: "Certified Project Director (CPD)" },

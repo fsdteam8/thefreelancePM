@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import JobRightFit from "../../jobBoard/_components/JobRightFit";
 import { quizData } from "../_components/data/quiz-data";
 
 export default function QuizPage({ params }: { params: { quizId: string } }) {
@@ -221,6 +222,7 @@ export default function QuizPage({ params }: { params: { quizId: string } }) {
           </Button>
         </div>
       </div>
+      <JobRightFit />
     </>
   );
 }

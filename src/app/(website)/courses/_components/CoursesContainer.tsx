@@ -107,7 +107,7 @@ export default function CoursesContainer() {
       <CourseHeader />
 
       {/* Search Section */}
-      <div className="my-[50px]">
+      <div className="mb-[20px]">
         <div className="bg-white py-6 lg:px-4">
           <div className="container mx-auto">
             <div className="relative mb-[30px] shadow-[0px_4px_12px_0px_#0000001A] rounded-[15px]">
@@ -178,7 +178,7 @@ export default function CoursesContainer() {
       </div>
 
       {/* Course Cards Grid */}
-      <div className="lg:py-6 lg:px-4 lg:flex-grow">
+      <div className="lg:py-6 lg:px-4 lg:flex-grow mb-[50px]">
         <div className="container mx-auto ">
           {content}
 
