@@ -31,25 +31,42 @@ export default function CoursesContainer() {
     hasNextPage,
     isFetchingNextPage,
   } = useInfiniteQuery({
-    queryKey: ["courses", sortBy, searchQuery, type, level],
-    queryFn: ({ pageParam = 1 }) =>
-      fetch(
-        `/api/dashboard/courses?searchQuery=${searchQuery}&page=${pageParam}&limit=3&sortBy=${sortBy}&category=${type}&type=${level}`,
-      )
+    queryKey: ["courses", searchQuery, sortBy, type, level],
+    queryFn: ({ pageParam = 1 }) => {
+      const params = new URLSearchParams();
+      params.append("page", pageParam.toString());
+      params.append("limit", "3");
+
+      if (searchQuery && searchQuery.trim() !== "") {
+        params.append("searchQuery", searchQuery.trim());
+      }
+
+      if (sortBy && sortBy.trim() !== "") {
+        params.append("sortBy", sortBy.trim());
+      }
+
+      if (type && type.trim() !== "" && type !== "all") {
+        params.append("category", type.trim());
+      }
+
+      if (level && level.trim() !== "" && level !== "all") {
+        params.append("type", level.trim());
+      }
+
+      return fetch(`/api/dashboard/courses?${params.toString()}`)
         .then((res) => res.json())
         .catch((err) => {
           throw err;
-        }),
+        });
+    },
     getNextPageParam: (lastPage) => {
-      console.log(lastPage);
-      // Check if there are more pages
       if (
         lastPage.success &&
         lastPage.meta.totalPages > lastPage.meta.currentPage
       ) {
-        return lastPage.meta.currentPage + 1; // Return the next page number
+        return lastPage.meta.currentPage + 1;
       }
-      return undefined; // No more pages
+      return undefined;
     },
     initialPageParam: 1,
   });
@@ -71,7 +88,7 @@ export default function CoursesContainer() {
   } else if (!data || data.pages[0]?.data?.length === 0) {
     content = (
       <div className="min-h-[400px] flex justify-center items-center">
-        No jobs found
+        No courses found
       </div>
     );
   } else {
@@ -96,7 +113,7 @@ export default function CoursesContainer() {
             <div className="relative mb-[30px] shadow-[0px_4px_12px_0px_#0000001A] rounded-[15px]">
               <input
                 type="text"
-                placeholder="Search job titles, companies, or keywords..."
+                placeholder="Search for courses, topics, or skills..."
                 className="w-full p-2 pl-3 pr-10 h-[52px] rounded-[15px] outline-[#004AAD] border-[1.5px] border-gray-500"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}

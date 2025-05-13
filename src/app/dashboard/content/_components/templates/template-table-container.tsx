@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { TablePagination } from "@/components/ui/table-pagination";
+import useDebounce from "@/hooks/useDebounce";
 import { Subscription, Template } from "@prisma/client";
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -42,20 +43,27 @@ const TemplatetableContainer = ({
 }: TemplatetableContainerProps) => {
   const [status, setStatus] = useState("");
   const [planId, setPlanId] = useState("");
+  const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
+  const searchQuery = useDebounce(search, 500);
   const { data } = useQuery<ApiResponse>({
-    queryKey: ["templates", status, planId, page],
+    queryKey: ["templates", status, planId, page, searchQuery],
     queryFn: () =>
       fetch(
-        `/api/dashboard/content/templates?status=${status}&plan=${planId}&page=${page}`,
+        `/api/dashboard/content/templates?status=${status}&plan=${planId}&page=${page}&searchQuery=${searchQuery}`,
       ).then((res) => res.json()),
   });
   return (
     <div>
       <div className="flex items-center justify-between">
-        <div className="flex items-center  gap-x-5">
+        <div className="flex items-center  gap-x-5 pb-2">
           <div className="flex items-center gap-2 ">
-            <Input placeholder="Search..." className="w-[350px]" />
+            <Input
+              placeholder="Search..."
+              className="w-[350px]"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
           <Select onValueChange={(s) => setStatus(s)}>
             <SelectTrigger className="w-[180px]">

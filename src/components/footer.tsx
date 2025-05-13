@@ -78,12 +78,7 @@ const Footer = () => {
               <li>
                 <a href="#">Join Now</a>
               </li>
-              <li>
-                <Link href="/subscriptions">Pricing</Link>
-              </li>
-              <li>
-                <a href="#">Benefits</a>
-              </li>
+
               <li>
                 <Link href="/faq">FAQs</Link>
               </li>
@@ -93,16 +88,12 @@ const Footer = () => {
             <h4 className="font-semibold mb-2">Company</h4>
             <ul className="space-y-1">
               <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
+                <a
+                  href="mailto:info@thefreelancepmclub.com"
+                  className="hover:underline"
+                >
+                  info@thefreelancepmclub.com
+                </a>
               </li>
             </ul>
           </div>

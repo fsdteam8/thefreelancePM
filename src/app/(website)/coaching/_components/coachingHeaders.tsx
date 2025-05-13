@@ -1,7 +1,20 @@
+import { auth } from "@/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { getCurrentSubscription } from "@/helper/subscription";
 import { CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
-const CoachingHeaders = () => {
+const CoachingHeaders = async () => {
+  const cu = await auth();
+
+  let isEliteButtonEnabled = !cu?.user.id;
+  const currentSubscription = await getCurrentSubscription(
+    cu?.user?.id as string,
+  );
+
+  isEliteButtonEnabled = currentSubscription?.tier !== "elite";
+
   return (
     <div className=" container mx-auto px-4 py-10">
       {/* Profile Section */}
@@ -53,9 +66,16 @@ const CoachingHeaders = () => {
             Freelancer Elite members get 1 FREE coaching session per month!
           </p>
         </div>
-        <button className="bg-[#FFA400]   text-black font-semibold px-6 py-3 rounded-md hover:brightness-110">
-          Upgrade to Elite for Free Sessions
-        </button>
+        {isEliteButtonEnabled && (
+          <Button
+            className="bg-[#FFA400] hover:bg-[#FFA400]/90  text-black font-semibold px-6 py-3 rounded-md hover:brightness-110"
+            asChild
+          >
+            <Link href="/subscriptions">
+              Upgrade to Elite for Free Sessions
+            </Link>
+          </Button>
+        )}
       </div>
     </div>
   );

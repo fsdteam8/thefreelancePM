@@ -7,13 +7,28 @@ export const dynamic = "force-dynamic";
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
+
     const page = parseInt(searchParams.get("page") || "1");
     const limit = parseInt(searchParams.get("limit") || "10");
-    const category = searchParams.get("category") || undefined;
-    const searchQuery = searchParams.get("searchQuery") || undefined;
-    const sortBy = searchParams.get("sortBy") || undefined;
 
-    // Validate pagination parameters
+    const rawCategory = searchParams.get("category");
+    const rawSearchQuery = searchParams.get("searchQuery");
+    const rawSortBy = searchParams.get("sortBy");
+
+    const category =
+      rawCategory && rawCategory.trim().length > 0
+        ? rawCategory.trim()
+        : undefined;
+
+    const searchQuery =
+      rawSearchQuery && rawSearchQuery.trim().length > 0
+        ? rawSearchQuery.trim()
+        : undefined;
+
+    const sortBy =
+      rawSortBy && rawSortBy.trim().length > 0 ? rawSortBy.trim() : undefined;
+
+    // Validate pagination
     if (page < 1 || limit < 1) {
       return NextResponse.json(
         {
@@ -32,39 +47,33 @@ export async function GET(request: NextRequest) {
     }
 
     // Build where clause
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint disable-next-line @typescript-eslint/no-explicit-any
     const where: any = {};
 
-    // Filter by category (TemplateType)
     if (category && ["free", "pro"].includes(category)) {
       where.category = category;
     }
 
-    // Search by title or description
     if (searchQuery) {
-      const sanitizedQuery = searchQuery.trim();
       where.OR = [
-        { title: { contains: sanitizedQuery, mode: "insensitive" } },
-        { description: { contains: sanitizedQuery, mode: "insensitive" } },
+        { title: { contains: searchQuery, mode: "insensitive" } },
+        { description: { contains: searchQuery, mode: "insensitive" } },
       ];
     }
 
-    // Determine orderBy condition
+    // Sorting
     const orderBy: { [key: string]: "asc" | "desc" } = {};
     if (sortBy === "asc" || sortBy === "desc") {
       orderBy.createdAt = sortBy;
     } else {
-      orderBy.createdAt = "desc"; // Default sort
+      orderBy.createdAt = "desc"; // default
     }
 
-    // Get total count for pagination
+    // Count total items
     const totalItems = await prisma.template.count({ where });
-
-    // Calculate pagination
     const totalPages = Math.ceil(totalItems / limit);
     const skip = (page - 1) * limit;
 
-    // Fetch templates
     const templates = await prisma.template.findMany({
       where,
       skip,

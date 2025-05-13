@@ -1,6 +1,6 @@
 const CourseHeader = () => {
   return (
-    <header className="bg-blue-600 h-[175px] text-white py-6 px-4 flex items-center justify-center text-center">
+    <header className="bg-[#004AAD] h-[175px] text-white py-6 px-4 flex items-center justify-center text-center">
       <div>
         <h1 className="text-[20px] lg:text-[32px] font-semibold mb-1">
           Master Project{" "}

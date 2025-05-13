@@ -10,6 +10,7 @@ export async function GET(request: NextRequest) {
     const plan = searchParams.get("plan") || "all";
     const page = parseInt(searchParams.get("page") || "1");
     const limit = parseInt(searchParams.get("limit") || "10");
+    const searchQuery = searchParams.get("searchQuery")?.trim() || "";
 
     // Validate pagination parameters
     if (page < 1 || limit < 1) {
@@ -25,12 +26,11 @@ export async function GET(request: NextRequest) {
             itemsPerPage: limit,
           },
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     // Build where clause
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const where: any = {};
 
     // Handle status filter
@@ -41,6 +41,14 @@ export async function GET(request: NextRequest) {
     // Handle plan filter
     if (plan !== "all") {
       where.plan = plan;
+    }
+
+    // Handle searchQuery (title + description)
+    if (searchQuery) {
+      where.OR = [
+        { title: { contains: searchQuery, mode: "insensitive" } },
+        { description: { contains: searchQuery, mode: "insensitive" } },
+      ];
     }
 
     // Get total count for pagination
@@ -88,7 +96,7 @@ export async function GET(request: NextRequest) {
           itemsPerPage: 10,
         },
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

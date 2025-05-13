@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
     const plan = searchParams.get("plan") || "all";
     const page = parseInt(searchParams.get("page") || "1");
     const limit = parseInt(searchParams.get("limit") || "10");
-    const searchQuery = searchParams.get("c") || "";
+    const searchQuery = searchParams.get("searchQuery") || "";
 
     // Validate pagination parameters
     if (page < 1 || limit < 1) {
@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
 
     // Handle plan filter
     if (plan !== "all") {
-      where.plan = plan;
+      where.plan.id = plan;
     }
 
     // Handle search query

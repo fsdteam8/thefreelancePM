@@ -1,5 +1,11 @@
 import { courseDownload } from "@/action/course/downloadReq";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { downloadFile } from "@/helper/downloadFile";
 import { cn, truncate } from "@/lib/utils";
 import { Course } from "@prisma/client";
@@ -22,7 +28,6 @@ const CoursesCard = ({ data }: CoursesCardProps) => {
           toast.error(res.message);
           return;
         } else if (res.success && res.url) {
-          console.log(res);
           toast.success(res.message);
           window.location.href = res.url;
         }
@@ -33,68 +38,47 @@ const CoursesCard = ({ data }: CoursesCardProps) => {
       });
     });
   };
+
   return (
-    <div className="bg-white rounded-[10px] overflow-hidden shadow-sm  border-input border-[1px]">
-      {/* Course Image Placeholder */}
-      {/* <div className="bg-gray-200 lg:h-[180px] h-36 relative">
-        <span className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-          <CircleCheckBig size={12} />
-        </span>
-      </div> */}
-
-      {/* Course Content */}
-      <div className="p-4">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="font-medium text-base mb-[25px] mt-[15px]">
-            {data.title}
-          </h3>
-
-          <span className="text-sm text-blue-600 font-medium"></span>
+    <Card className="rounded-[10px] border-[1px] border-input shadow-sm overflow-hidden bg-white">
+      <CardHeader>
+        <div className="flex justify-between items-start ">
+          <h3 className="font-medium text-base  mt-[15px]">{data.title}</h3>
         </div>
-        <p className="text-sm text-gray-700 mb-4">{desc}</p>
+      </CardHeader>
+      <CardContent className="p-4 ">
+        <p className="text-sm text-gray-700 ">{desc}</p>
 
-        <div className="flex justify-between items-center my-[50px]">
+        <div className="flex justify-between items-center my-[20px]">
           <div
             className={cn(
-              "flex items-center justify-center gap-1 px-2 py-1 rounded-full ",
+              "flex items-center gap-1 px-2 py-1 rounded-full text-xs",
               data.type === "Beginner"
-                ? "bg-[#DCFCE7]"
-                : data.type == "Intermediate"
-                  ? "bg-[#FEF9C3]"
-                  : "bg-[#FEE2E2]",
+                ? "bg-[#DCFCE7] text-[#166534]"
+                : data.type === "Intermediate"
+                  ? "bg-[#FEF9C3] text-[#854D0E]"
+                  : "bg-[#FEE2E2] text-[#991B1B]",
             )}
           >
-            <p>
-              <ChartNoAxesColumnIncreasing size={14} />
-            </p>
-            <p
-              className={cn(
-                "text-xs",
-                data.type === "Beginner"
-                  ? "text-[#166534]"
-                  : data.type === "Intermediate"
-                    ? "text-[#854D0E]"
-                    : "text-[#991B1B]",
-              )}
-            >
-              {data.type}
-            </p>
+            <ChartNoAxesColumnIncreasing size={14} />
+            <span>{data.type}</span>
           </div>
           <div className="flex items-center text-xs text-gray-500">
             <Clock size={14} className="mr-1" />
-            <span> 8 hours</span>
+            <span>8 hours</span>
           </div>
         </div>
-
-        <Button
-          className="bg-blue-600 text-white h-[40px] py-2 px-4 rounded text-sm font-medium hover:bg-blue-700 transition w-full"
-          onClick={handleDownload}
-          disabled={pending}
-        >
-          {pending ? "Downloading..." : "Download"}
-        </Button>
-      </div>
-    </div>
+        <CardFooter className=" p-0 ">
+          <Button
+            className="w-full bg-blue-600 text-white h-[40px] text-sm font-medium hover:bg-blue-700 transition"
+            onClick={handleDownload}
+            disabled={pending}
+          >
+            {pending ? "Downloading..." : "Download"}
+          </Button>
+        </CardFooter>
+      </CardContent>
+    </Card>
   );
 };
 

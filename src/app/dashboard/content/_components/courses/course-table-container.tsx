@@ -49,7 +49,7 @@ const CoursetableContainer = ({ subscripton }: TemplatetableContainerProps) => {
     queryKey: ["courses", status, planId, page, searchQuery],
     queryFn: () =>
       fetch(
-        `/api/dashboard/content/courses?status=${status}&plan=${planId}&page=${page}&searchQuery=${searchQuery}`
+        `/api/dashboard/content/courses?status=${status}&plan=${planId}&page=${page}&searchQuery=${searchQuery}`,
       ).then((res) => res.json()),
   });
   return (

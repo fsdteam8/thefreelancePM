@@ -7,14 +7,11 @@ export const dynamic = "force-dynamic";
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const page = parseInt(searchParams.get("page") || "1");
-    const limit = parseInt(searchParams.get("limit") || "10");
-    const category = searchParams.get("category") || undefined;
-    const type = searchParams.get("type") || undefined;
-    const searchQuery = searchParams.get("searchQuery") || undefined;
-    const sortBy = searchParams.get("sortBy") || undefined;
 
-    // Validate pagination parameters
+    // Parse pagination
+    const page = parseInt(searchParams.get("page") || "1", 10);
+    const limit = parseInt(searchParams.get("limit") || "10", 10);
+
     if (page < 1 || limit < 1) {
       return NextResponse.json(
         {
@@ -32,47 +29,60 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Build where clause
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // Sanitize and extract filters
+    const rawCategory = searchParams.get("category");
+    const rawType = searchParams.get("type");
+    const rawSearchQuery = searchParams.get("searchQuery");
+    const rawSortBy = searchParams.get("sortBy");
+
+    const category =
+      rawCategory && rawCategory.trim() !== "" && rawCategory !== "all"
+        ? rawCategory.trim()
+        : undefined;
+
+    const type =
+      rawType && rawType.trim() !== "" && rawType !== "all"
+        ? rawType.trim()
+        : undefined;
+
+    const searchQuery =
+      rawSearchQuery && rawSearchQuery.trim() !== ""
+        ? rawSearchQuery.trim()
+        : undefined;
+
+    const sortBy =
+      rawSortBy && rawSortBy.trim() !== "" ? rawSortBy.trim() : undefined;
+
+    // Build the Prisma `where` clause
     const where: any = {};
 
-    // Filter by category
-    if (category && category !== "all") {
+    if (category) {
       where.category = category;
     }
 
-    // Filter by type (CourseType)
-    if (type && type !== "all") {
+    if (type) {
       where.type = type;
     }
 
-    // Determine orderBy condition
-    const orderBy: { [key: string]: "asc" | "desc" } = {};
-    if (sortBy === "asc" || sortBy === "desc") {
-      orderBy.createdAt = sortBy;
-    } else {
-      orderBy.createdAt = "desc"; // Default sort
-    }
-
-    // Search by title, description, or skills
     if (searchQuery) {
-      const sanitizedQuery = searchQuery.trim();
       where.OR = [
-        { title: { contains: sanitizedQuery, mode: "insensitive" } },
-        { description: { contains: sanitizedQuery, mode: "insensitive" } },
-        // If you have a field like `skills`, add:
-        { skills: { hasSome: [sanitizedQuery] } },
+        { title: { contains: searchQuery, mode: "insensitive" } },
+        { description: { contains: searchQuery, mode: "insensitive" } },
+        // { skills: { hasSome: [searchQuery] } }, // optional field
       ];
     }
 
+    // Build sort order
+    const orderBy: { [key: string]: "asc" | "desc" } = {
+      createdAt: sortBy === "asc" || sortBy === "desc" ? sortBy : "desc",
+    };
+
     // Get total count for pagination
     const totalItems = await prisma.course.count({ where });
-
-    // Calculate pagination
     const totalPages = Math.ceil(totalItems / limit);
     const skip = (page - 1) * limit;
 
-    // Fetch courses
+    // Fetch paginated courses
     const courses = await prisma.course.findMany({
       where,
       skip,

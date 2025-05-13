@@ -17,7 +17,7 @@ export default function CommunityAction() {
           variant="secondary"
           className="bg-white text-blue-600 hover:bg-gray-100"
         >
-          <Link href="/subscription">Get Started</Link>
+          <Link href="/subscriptions">Get Started</Link>
         </Button>
         <Button variant="outline" effect="gooeyLeft" className="bg-transparent">
           <Link href="/jobBoard">Explore</Link>
