@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="container mx-auto px-4 pt-20">
           <div className="max-w-3xl">
             <h1 className="text-[30px] md:text-[32px] lg:text-[40px] font-bold text-white mb-4">
-              Welcome to The <span className="text-blue-500">FreelancePM</span>{" "}
+              Welcome to The <span className="text-[#004aad]">FreelancePM</span>{" "}
               Club!
             </h1>
 
@@ -35,7 +35,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <Button
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md"
+                className="bg-[#004aad] hover:bg-blue-700 text-white px-6 py-2 rounded-md"
                 effect="gooeyLeft"
               >
                 <Link href="/subscriptions">Get Started</Link>

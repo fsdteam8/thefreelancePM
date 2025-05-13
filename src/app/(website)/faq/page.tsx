@@ -1,11 +1,11 @@
+import CommunityAction from "@/components/action/community-action";
 import Header from "@/components/header";
 import Faq from "./_components/faq";
-import CommunityAction from "@/components/action/community-action";
 
 const page = () => {
   return (
     <main className="pt-12">
-      <Header subtitile="Have questions? We’ve got answers. Here’s everything you need to know about how our quiz and recommendation system works.">
+      <Header subtitile="Thinking about joining The Freelance PM Club but have questions? We’ve got you covered! Here are some of the most common questions from our community.">
         Frequently Asked PM{" "}
         <span className="text-[#FFA400] underline">Questions</span>
       </Header>
@@ -13,7 +13,7 @@ const page = () => {
         <Faq />
       </section>
       <div className="mt-44">
-      <CommunityAction/>
+        <CommunityAction />
       </div>
     </main>
   );

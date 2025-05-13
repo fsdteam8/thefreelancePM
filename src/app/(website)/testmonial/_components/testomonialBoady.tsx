@@ -7,6 +7,8 @@ const TestomonialBoady = async () => {
       active: true,
     },
   });
+
+  if (testmonial.length === 0) return;
   return (
     <div className="container mx-auto mt-7  ">
       <div className="mb-16">

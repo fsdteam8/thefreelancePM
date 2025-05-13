@@ -41,7 +41,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className="scrollbar-thin">
-      <body className={` ${poppins.className} antialiased `}>
+      <body className={` ${poppins.className} antialiased overflow-x-hidden`}>
         <AppProvider>{children}</AppProvider>
 
         <Toaster closeButton richColors />

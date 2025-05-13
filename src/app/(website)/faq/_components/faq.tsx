@@ -8,6 +8,16 @@ import {
 const Faq = () => {
   const data = [
     {
+      question: "How do I sign up and get started?",
+      answer: (
+        <p className="leading-7">
+          Easy! Click Join Now on our homepage. Choose your membership level,
+          create your account, and start accessing exclusive resources, job
+          opportunities, and coaching right away! 🚀
+        </p>
+      ),
+    },
+    {
       question: "What if I have no project management experience?",
       answer: (
         <p className="leading-7">
@@ -152,21 +162,6 @@ const Faq = () => {
           <span className="font-semibold">test the waters</span> before
           upgrading to{" "}
           <span className="font-semibold">Freelancer Pro or Elite</span>.
-        </p>
-      ),
-    },
-    {
-      question:
-        "How do I know which project management certification is right for me?",
-      answer: (
-        <p className="leading-7">
-          Easy! Click <span className="font-semibold">Join</span> Now on our
-          homepage. Choose your membership level, create your account, and start
-          accessing{" "}
-          <span className="font-semibold">
-            exclusive resources, job opportunities, and coaching
-          </span>{" "}
-          right away! 🚀
         </p>
       ),
     },
