@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Role } from "@prisma/client";
 import { Menu, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -66,9 +67,10 @@ const navlinks = [
 
 interface Props {
   isLoggedin: boolean;
+  role: Role;
 }
 
-export default function Navbar({ isLoggedin }: Props) {
+export default function Navbar({ isLoggedin, role }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -134,9 +136,15 @@ export default function Navbar({ isLoggedin }: Props) {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center">
                 <DropdownMenuItem asChild>
-                  <Link href="/account" className="w-full">
-                    Account{" "}
-                  </Link>
+                  {role === "admin" ? (
+                    <Link href="/dashboard" className="w-full">
+                      Dashboard
+                    </Link>
+                  ) : (
+                    <Link href="/account" className="w-full">
+                      Account{" "}
+                    </Link>
+                  )}
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
 

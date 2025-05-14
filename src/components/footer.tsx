@@ -76,7 +76,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-2">Membership</h4>
             <ul className="space-y-1">
               <li>
-                <a href="#">Join Now</a>
+                <Link href="/subscriptions">Join Now</Link>
               </li>
 
               <li>
@@ -85,7 +85,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-2">Company</h4>
+            <h4 className="font-semibold mb-2">Contact</h4>
             <ul className="space-y-1">
               <li>
                 <a

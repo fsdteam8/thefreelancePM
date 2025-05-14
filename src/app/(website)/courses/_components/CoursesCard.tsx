@@ -70,7 +70,7 @@ const CoursesCard = ({ data }: CoursesCardProps) => {
         </div>
         <CardFooter className=" p-0 ">
           <Button
-            className="w-full bg-blue-600 text-white h-[40px] text-sm font-medium hover:bg-blue-700 transition"
+            className="w-full bg-[#004AAD] text-white h-[40px] text-sm font-medium hover:bg-blue-700 transition"
             onClick={handleDownload}
             disabled={pending}
           >

@@ -99,12 +99,12 @@ const Faq = () => {
             100+ professionally designed project management templates
           </span>
           , including: <br />
-          <span>✅ project plans</span> <br />
-          <span>✅ Gantt charts</span> <br />
-          <span>✅ risk & issue logs</span> <br />
-          <span>✅ client onboarding docs</span> <br />
-          <span>✅ freelance proposals & contracts</span> <br />
-          <span>✅ Agile & Scrum boards</span> <br />
+          <span>✅ Project Plans</span> <br />
+          <span>✅ Gantt Charts</span> <br />
+          <span>✅ Risk & Issue Logs</span> <br />
+          <span>✅ Client Onboarding Docs</span> <br />
+          <span>✅ Freelance Proposals & Contracts</span> <br />
+          <span>✅ Agile & Scrum Boards</span> <br />
           ...and more! These templates save you time and give you a professional
           edge in managing projects and pitching to clients.
         </p>
@@ -115,7 +115,7 @@ const Faq = () => {
       answer: (
         <p className="leading-7">
           Yes! Our Slack community is a
-          <span className="font-semibold">dynamic space </span>
+          <span className="font-semibold"> dynamic space </span>
           where members: <br />
           <span>🔥 Share job leads & freelance opportunities</span> <br />
           <span>🔥 Network with other PMs & consultants</span> <br />
