@@ -8,14 +8,14 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <OurMisson/>
+      <OurMisson />
       <div className="mt-32">
-      <ExploreOurResources/>
+        <ExploreOurResources />
       </div>
-      <div className="mt-32">
-       <TestomonialBoady/>
+      <div className="mt-32 ">
+        <TestomonialBoady />
       </div>
-      <CommunityAction/>
+      <CommunityAction />
     </div>
   );
 }

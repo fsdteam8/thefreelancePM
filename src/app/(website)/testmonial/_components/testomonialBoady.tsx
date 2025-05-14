@@ -23,7 +23,7 @@ const TestomonialBoady = async () => {
           resources.
         </p>
       </div>
-      <div className="mb-20">
+      <div className="mb-20 ">
         <TestimonialCard data={testmonial} />
       </div>
     </div>

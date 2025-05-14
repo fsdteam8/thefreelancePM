@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Testmonial } from "@prisma/client";
 import SuccessStoriesCard from "../success-stories/_components/SuccessStoriesCard";
@@ -18,7 +16,7 @@ interface Props {
 export default function TestimonialCard({ data }: Props) {
   return (
     <div className="flex flex-col justify-center">
-      <Carousel className="w-full mb-4">
+      <Carousel className=" mb-4">
         <CarouselContent>
           {data.map((item, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
@@ -32,8 +30,8 @@ export default function TestimonialCard({ data }: Props) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
       </Carousel>
     </div>
   );
