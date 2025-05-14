@@ -160,10 +160,7 @@ export default function Navbar({ isLoggedin, role }: Props) {
             </DropdownMenu>
           </>
         ) : (
-          <Button
-            className="bg-[#004aad] hover:bg-blue-700 text-white rounded-md px-4 py-2"
-            asChild
-          >
+          <Button className=" text-white rounded-md px-4 py-2" asChild>
             <Link href="/sign-up">Join Now</Link>
           </Button>
         )}

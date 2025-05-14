@@ -8,7 +8,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-[#004AAD] text-primary-foreground hover:bg-[#004AAD]/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -48,7 +48,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 interface IconProps {
@@ -84,7 +84,7 @@ const Button = React.forwardRef<
       asChild = false,
       ...props
     },
-    ref
+    ref,
   ) => {
     const Comp = asChild ? Slot : "button";
     return (
@@ -114,7 +114,7 @@ const Button = React.forwardRef<
           ))}
       </Comp>
     );
-  }
+  },
 );
 Button.displayName = "Button";
 

@@ -161,7 +161,7 @@ export function LoginForm() {
         {/* Submit button */}
         <Button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 min-h-[45px]"
+          className="w-full  min-h-[45px]"
           disabled={loading}
         >
           {pending

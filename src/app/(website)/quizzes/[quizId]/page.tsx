@@ -216,7 +216,7 @@ export default function QuizPage({ params }: { params: { quizId: string } }) {
           <Button
             onClick={handleSubmit}
             disabled={!allQuestionsAnswered}
-            className="bg-blue-600 hover:bg-blue-700 px-8"
+            className=" px-8"
           >
             Submit
           </Button>

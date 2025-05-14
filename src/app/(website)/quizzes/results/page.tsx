@@ -154,7 +154,7 @@ export default function ResultsPage() {
             in
           </p>
 
-          <h2 className="text-4xl font-bold text-blue-600 text-center mb-8">
+          <h2 className="text-4xl font-bold text-[#004AAD] text-center mb-8">
             {result?.name || "Technology Industries"}
           </h2>
 
@@ -164,7 +164,7 @@ export default function ResultsPage() {
                 key={industry.id}
                 className="bg-white rounded-lg shadow-md p-6 mb-6"
               >
-                <h3 className="text-xl font-semibold text-blue-600 mb-3">
+                <h3 className="text-xl font-semibold text-[#004AAD] mb-3">
                   {industry.name}
                 </h3>
                 <div className="mb-6">
@@ -188,9 +188,7 @@ export default function ResultsPage() {
 
           <div className="mt-8 text-center">
             <Link href="/quizzes">
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                Take Another Quiz
-              </Button>
+              <Button>Take Another Quiz</Button>
             </Link>
           </div>
         </div>
@@ -203,7 +201,7 @@ export default function ResultsPage() {
           {result && (
             <>
               <div className="mb-8 text-start">
-                <h2 className="text-3xl font-bold text-blue-600 mb-2">
+                <h2 className="text-3xl font-bold text-[#004AAD] mb-2">
                   {result.name}
                 </h2>
                 <p className="text-lg text-gray-700">{result.description}</p>
@@ -246,6 +244,12 @@ export default function ResultsPage() {
               </div>
             </>
           )}
+
+          <div className="mt-8 text-center">
+            <Link href="/quizzes">
+              <Button>Take Another Quiz</Button>
+            </Link>
+          </div>
         </div>
       ) : (
         <div className="bg-white rounded-lg shadow-none p-8">
@@ -256,7 +260,7 @@ export default function ResultsPage() {
           {result && (
             <>
               <div className="mb-8 text-start">
-                <h2 className="text-3xl font-bold text-blue-600 mb-2">
+                <h2 className="text-3xl font-bold text-[#004AAD] mb-2">
                   {result.name}
                 </h2>
                 <p className="text-lg text-gray-700">{result.description}</p>
@@ -275,7 +279,7 @@ export default function ResultsPage() {
                   {result.industries.map((industry: string) => (
                     <span
                       key={industry}
-                      className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+                      className="bg-[#004AAD] text-white px-3 py-1 rounded-full text-sm"
                     >
                       {industry}
                     </span>
@@ -284,6 +288,12 @@ export default function ResultsPage() {
               </div>
             </>
           )}
+
+          <div className="mt-8 text-center">
+            <Link href="/quizzes">
+              <Button>Take Another Quiz</Button>
+            </Link>
+          </div>
         </div>
       )}
     </div>

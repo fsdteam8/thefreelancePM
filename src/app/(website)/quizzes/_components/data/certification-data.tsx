@@ -131,6 +131,27 @@ export const certificationData: Record<
         ],
         url: "https://www.iapm.net/en/certification/levels-of-certification/certified-project-manager-iapm/",
       },
+      {
+        id: "cpmai",
+        name: "Cognitive Project Management for AI (CPMAI)",
+        description:
+          "The CPMAI certification focuses on managing AI and ML projects. It’s ideal for professionals in industries where artificial intelligence plays a key role, helping them understand the unique challenges of managing AI-based initiatives.",
+        idealFor:
+          "Project managers working on AI and machine learning projects.",
+        prerequisites: [
+          "No formal prerequisites",
+          "Training course required before the exam",
+          "AI and ML project management experience recommended",
+        ],
+        industries: [
+          "Technology (IT & Software Development)",
+          "Finance & Banking",
+          "Healthcare",
+          "Telecommunications",
+          "Manufacturing & Engineering",
+        ],
+        url: "https://www.pmi.org/shop/p-/digital-product/cognitive-project-management-in-ai-(cpmai)-v7---training-,-a-,-certification/cpmai-b-01",
+      },
     ],
     healthcare: [
       {
@@ -529,6 +550,27 @@ export const certificationData: Record<
         ],
         url: "https://www.pmi.org/certifications/agile-certifications",
       },
+      {
+        id: "cpmai",
+        name: "Cognitive Project Management for AI (CPMAI)",
+        description:
+          "The CPMAI certification focuses on managing AI and ML projects. It’s ideal for professionals in industries where artificial intelligence plays a key role, helping them understand the unique challenges of managing AI-based initiatives.",
+        idealFor:
+          "Project managers working on AI and machine learning projects.",
+        prerequisites: [
+          "No formal prerequisites",
+          "Training course required before the exam",
+          "AI and ML project management experience recommended",
+        ],
+        industries: [
+          "Technology (IT & Software Development)",
+          "Finance & Banking",
+          "Healthcare",
+          "Telecommunications",
+          "Manufacturing & Engineering",
+        ],
+        url: "https://www.pmi.org/shop/p-/digital-product/cognitive-project-management-in-ai-(cpmai)-v7---training-,-a-,-certification/cpmai-b-01",
+      },
     ],
     manufacturing: [
       {
@@ -643,9 +685,9 @@ export const certificationData: Record<
       },
       {
         id: "cpmai",
-        name: "Certified AI Project Manager (CPMAI)",
+        name: "Cognitive Project Management for AI (CPMAI)",
         description:
-          "The CPMAI certification focuses on managing AI and machine learning projects. It’s ideal for professionals in industries where artificial intelligence plays a key role, helping them understand the unique challenges of managing AI-based initiatives.",
+          "The CPMAI certification focuses on managing AI and ML projects. It’s ideal for professionals in industries where artificial intelligence plays a key role, helping them understand the unique challenges of managing AI-based initiatives.",
         idealFor:
           "Project managers working on AI and machine learning projects.",
         prerequisites: [
@@ -655,9 +697,10 @@ export const certificationData: Record<
         ],
         industries: [
           "Technology (IT & Software Development)",
-          "Cybersecurity",
-          "Pharmaceuticals & Biotechnology",
           "Finance & Banking",
+          "Healthcare",
+          "Telecommunications",
+          "Manufacturing & Engineering",
         ],
         url: "https://www.pmi.org/shop/p-/digital-product/cognitive-project-management-in-ai-(cpmai)-v7---training-,-a-,-certification/cpmai-b-01",
       },

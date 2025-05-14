@@ -100,8 +100,8 @@ export default function TemplatesContainer() {
       {/* Header */}
       <RadyToUse />
       {/* Search Section */}
-      <div className="my-[50px] ">
-        <div className="bg-white py-6 lg:px-4">
+      <div className="mt-[50px] ">
+        <div className="bg-white  lg:px-4">
           <div className="container mx-auto">
             <div className="relative mb-[30px] shadow-[0px_4px_12px_0px_#0000001A] rounded-[15px]">
               <input
@@ -156,7 +156,7 @@ export default function TemplatesContainer() {
       </div>
 
       {/* Template Cards Grid */}
-      <div className="lg:py-6 lg:px-4 lg:flex-grow">
+      <div className="lg:py-[50px] lg:px-4 lg:flex-grow">
         <div>
           {content}
           {/* Load More Button */}
