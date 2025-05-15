@@ -20,7 +20,13 @@ export default function CertificationsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const currentCertifications = searchParams.get("certs")?.split(",") || [];
+    // Get raw certs from query param
+    const rawCerts = searchParams.get("certs");
+
+    // Handle "none" or empty
+    const currentCertifications =
+      !rawCerts || rawCerts.toLowerCase() === "none" ? [] : rawCerts.split(",");
+
     // Get certification recommendations
     const recommendedCerts = getRecommendedCertifications(
       industry,

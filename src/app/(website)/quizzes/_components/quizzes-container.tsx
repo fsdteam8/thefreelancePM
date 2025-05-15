@@ -5,6 +5,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import Image from "next/image";
 import Link from "next/link";
 // import QuizzesSearch from "./quizzes_Search";
 
@@ -13,16 +14,19 @@ const QuizzesContainer = () => {
     {
       id: "ultimate-pm-role",
       title: "The Ultimate PM Role Quiz - Where Do You Belong?",
+
       description:
         "This quiz is designed to guide individuals toward the project manager role that fits their personality, skill set, and passions.",
-      image: "/placeholder.svg?height=200&width=400",
+      image:
+        "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/ultimate%20pm.png",
     },
     {
       id: "leadership-style",
       title: "How Do You Lead? Discover Your Project Management Style!",
       description:
         "This quiz is designed to help project managers identify their leadership style match.",
-      image: "/placeholder.svg?height=200&width=400",
+      image:
+        "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/How%20do%20you%20lead.png",
     },
     {
       id: "industry-match",
@@ -30,7 +34,8 @@ const QuizzesContainer = () => {
         "What's Your Passion? Discover the right industry for you as a project manager!",
       description:
         "This quiz ensures aspiring and current PMs can find the right industry based on their interests and skills.",
-      image: "/placeholder.svg?height=200&width=400",
+      image:
+        "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/Whats%20your%20passion.png",
     },
     {
       id: "certification-match",
@@ -38,7 +43,8 @@ const QuizzesContainer = () => {
         "Get Certified! Determine what project management certification is right for you!",
       description:
         "This quiz is designed to help project managers determine the best certification based on their background, experience, and industry.",
-      image: "/placeholder.svg?height=200&width=400",
+      image:
+        "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/Get%20certified.png",
     },
   ];
   return (
@@ -52,8 +58,8 @@ const QuizzesContainer = () => {
               key={index}
               className="max-w-[393px] mx-auto shadow-none overflow-hidden p-0"
             >
-              <div className="bg-muted h-48 w-full" aria-hidden="true">
-                {/* Placeholder for image */}
+              <div className="bg-muted h-48 w-full relative" aria-hidden="true">
+                <Image src={quiz.image} alt={quiz.title} fill />
               </div>
               <CardHeader className="p-[15px]  pb-0">
                 <h2 className="text-[18px] font-medium tracking-tight text-[#000000]">

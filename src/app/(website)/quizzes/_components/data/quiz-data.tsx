@@ -2,6 +2,8 @@ export const quizData = [
   {
     id: "ultimate-pm-role",
     title: "The Ultimate PM Role Quiz - Where Do You Belong?",
+    banner:
+      "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/ultimate%20pm.png",
     description:
       "This quiz is designed to guide individuals toward the project management role that fits their personality, skill set, and passions.",
     questions: [
@@ -248,6 +250,8 @@ export const quizData = [
   {
     id: "leadership-style",
     title: "How Do You Lead? Discover Your Project Management Style!",
+    banner:
+      "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/How%20do%20you%20lead.png",
     description:
       "This quiz is designed to help project managers identify their leadership approach.",
     questions: [
@@ -398,6 +402,8 @@ export const quizData = [
     id: "industry-match",
     title:
       "What's Your Passion? Discover the right industry for you as a project manager!",
+    banner:
+      "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/Whats%20your%20passion.png",
     description:
       "This quiz ensures aspiring and current PMs can find the right industry based on their interests and skills.",
     questions: [
@@ -734,6 +740,8 @@ export const quizData = [
     id: "certification-match",
     title:
       "Get Certified! Determine what project management certification is right for you!",
+    banner:
+      "https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/Get%20certified.png",
     description:
       "This quiz is designed to help project managers determine the best certification based on their background, experience, and industry.",
     questions: [
@@ -832,7 +840,7 @@ export const quizData = [
           { value: "pharmaceuticals", text: "Pharmaceuticals & Biotechnology" },
           { value: "government", text: "Government & Public Sector" },
           { value: "energy", text: "Energy & Utilities" },
-          { value: "automotive", text: "Automotive & Aerospace" },
+          { value: "automotive", text: "Automotive & Aerospace" }, // nai
           { value: "nonprofit", text: "Nonprofit & Social Impact" },
           { value: "entertainment", text: "Entertainment & Media" },
           { value: "cybersecurity", text: "Cybersecurity" },
