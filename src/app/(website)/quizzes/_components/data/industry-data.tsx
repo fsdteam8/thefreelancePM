@@ -184,32 +184,32 @@ export const industryData = [
       "Strong career longevity with asset management skills",
     ],
   },
-  {
-    id: "business",
-    name: "Business Development",
-    category: "C",
-    description:
-      "Business development PMs focus on growth strategies, market expansion, and partnership opportunities to drive company growth.",
-    benefits: [
-      "Strategic role with high visibility in organizations",
-      "Opportunities to shape company direction and growth",
-      "Exposure to diverse business models and markets",
-      "Strong career advancement potential",
-    ],
-  },
-  {
-    id: "sales",
-    name: "Sales Enablement",
-    category: "C",
-    description:
-      "Sales enablement PMs develop tools, training, and resources to help sales teams sell more effectively and efficiently.",
-    benefits: [
-      "Direct impact on company revenue and growth",
-      "Collaboration with marketing, product, and sales teams",
-      "Opportunities to implement innovative sales technologies",
-      "Strong demand for data-driven sales optimization",
-    ],
-  },
+  // {
+  //   id: "business",
+  //   name: "Business Development",
+  //   category: "C",
+  //   description:
+  //     "Business development PMs focus on growth strategies, market expansion, and partnership opportunities to drive company growth.",
+  //   benefits: [
+  //     "Strategic role with high visibility in organizations",
+  //     "Opportunities to shape company direction and growth",
+  //     "Exposure to diverse business models and markets",
+  //     "Strong career advancement potential",
+  //   ],
+  // },
+  // {
+  //   id: "sales",
+  //   name: "Sales Enablement",
+  //   category: "C",
+  //   description:
+  //     "Sales enablement PMs develop tools, training, and resources to help sales teams sell more effectively and efficiently.",
+  //   benefits: [
+  //     "Direct impact on company revenue and growth",
+  //     "Collaboration with marketing, product, and sales teams",
+  //     "Opportunities to implement innovative sales technologies",
+  //     "Strong demand for data-driven sales optimization",
+  //   ],
+  // },
   {
     id: "construction",
     name: "Construction & Engineering",
