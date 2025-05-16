@@ -47,7 +47,7 @@ export default function CertificationsPage() {
   }
 
   // If no recommendations (they already have all relevant certifications)
-  if (recommendations.length == 0) {
+  if (recommendations.length === 0) {
     return (
       <div className="container mx-auto px-4 py-8 max-w-3xl mt-32">
         <div className="bg-white rounded-lg shadow-md p-8 text-center">

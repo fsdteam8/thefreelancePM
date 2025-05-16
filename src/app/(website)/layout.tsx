@@ -1,6 +1,7 @@
 import { auth } from "@/auth";
 import Footer from "@/components/footer";
 import MaintenancePage from "@/components/shared/maintanence";
+import { getCurrentSubscription } from "@/helper/subscription";
 import { prisma } from "@/lib/prisma";
 import { Role } from "@prisma/client";
 import { ReactNode } from "react";
@@ -15,9 +16,22 @@ const WebsiteLayoout = async ({ children }: { children: ReactNode }) => {
   if (isMaintanence) {
     return <MaintenancePage />;
   }
+
+  const currentSubscription = await getCurrentSubscription(
+    cu?.user.id as string,
+  );
+
+  const isJobBoardVisible =
+    currentSubscription?.tier === "pro" ||
+    currentSubscription?.tier === "elite";
+
   return (
     <div className="min-h-screen flex flex-col ">
-      <Navbar isLoggedin={!!cu} role={cu?.user.role as Role} />
+      <Navbar
+        isLoggedin={!!cu}
+        role={cu?.user.role as Role}
+        isJobBoardVisible={!!isJobBoardVisible}
+      />
       <div className="flex-1">{children}</div>
       <Footer />
     </div>

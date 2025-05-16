@@ -1956,6 +1956,19 @@ export const certificationData: Record<
         ],
         url: "https://www.pmi.org/certifications/project-management-pmp",
       },
+      {
+        id: "ccm",
+        name: "Certified Construction Manager (CCM)",
+        description:
+          "The CCM certification is ideal for individuals working in or pursuing careers in construction project management. It validates the knowledge and expertise required to manage the planning, design, construction, and completion of projects in the construction industry.",
+        idealFor: "Professionals working in construction project management.",
+        prerequisites: [
+          "Four-year degree in construction-related field + 4 years construction management experience OR",
+          "Eight years of experience with no degree",
+        ],
+        industries: ["Construction & Engineering"],
+        url: "https://www.cmaanet.org/certification/ccm",
+      },
     ],
     ecommerce: [
       {

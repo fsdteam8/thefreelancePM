@@ -68,9 +68,10 @@ const navlinks = [
 interface Props {
   isLoggedin: boolean;
   role: Role;
+  isJobBoardVisible: boolean;
 }
 
-export default function Navbar({ isLoggedin, role }: Props) {
+export default function Navbar({ isLoggedin, role, isJobBoardVisible }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -89,6 +90,10 @@ export default function Navbar({ isLoggedin, role }: Props) {
     };
   }, []);
 
+  const formattedNavlinks = isJobBoardVisible
+    ? navlinks
+    : navlinks.filter((item) => item.id !== 3);
+
   return (
     <header
       className={`fixed top-0  left-0 right-0 z-50 transition-all duration-300 ${
@@ -104,7 +109,7 @@ export default function Navbar({ isLoggedin, role }: Props) {
           </SheetTrigger>
           <SheetContent side="left">
             <div className="space-y-4 mt-10">
-              {navlinks.map(({ id, href, label }) => (
+              {formattedNavlinks.map(({ id, href, label }) => (
                 <Button
                   variant="link"
                   effect="hoverUnderline"

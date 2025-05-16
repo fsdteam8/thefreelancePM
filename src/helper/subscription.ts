@@ -21,6 +21,7 @@ export default async function getSubscriptionById(id: string) {
 }
 
 export async function getCurrentSubscription(userId: string) {
+  if (!userId) return null;
   const now = new Date();
   const currentSubscription = await prisma.userSubscription.findFirst({
     where: {
