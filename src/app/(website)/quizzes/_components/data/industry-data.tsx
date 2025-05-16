@@ -26,8 +26,8 @@ export const industryCategories: Record<
     industries: [
       "Finance & Banking",
       "Real Estate & Property Management",
-      "Business Development",
-      "Sales Enablement",
+      // "Business Development",
+      // "Sales Enablement",
     ],
   },
   D: {

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { downloadFile } from "@/helper/downloadFile";
 import { cn, truncate } from "@/lib/utils";
 import { Template } from "@prisma/client";
+import Image from "next/image";
 import { useTransition } from "react";
 import { toast } from "sonner";
 
@@ -40,6 +41,7 @@ const TemplateCard = ({ data }: Props) => {
     >
       {/* Template Image Placeholder */}
       <div className="bg-gray-200 lg:h-[216px] h-[150px] relative">
+        {data.banner && <Image src={data.banner} alt={data.title} fill />}
         <span
           className={cn(
             "absolute top-3 right-3  text-xs px-2 py-1 rounded",

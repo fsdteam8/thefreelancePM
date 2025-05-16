@@ -188,7 +188,7 @@ export const certificationData: Record<
         id: "ccrp",
         name: "Certified Clinical Research Project Manager (CCRP)",
         description:
-          "The CCPM certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
+          "The CCRP certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
         idealFor:
           "Project managers in the healthcare or clinical research sectors.",
         prerequisites: [
@@ -280,19 +280,6 @@ export const certificationData: Record<
           "Agriculture & Food Industry",
         ],
         url: "https://www.pmi.org/certifications/certified-associate-capm",
-      },
-      {
-        id: "ccm",
-        name: "Certified Construction Manager (CCM)",
-        description:
-          "The CCM certification is ideal for individuals working in or pursuing careers in construction project management. It validates the knowledge and expertise required to manage the planning, design, construction, and completion of projects in the construction industry.",
-        idealFor: "Professionals working in construction project management.",
-        prerequisites: [
-          "Four-year degree in construction-related field + 4 years construction management experience OR",
-          "Eight years of experience with no degree",
-        ],
-        industries: ["Construction & Engineering"],
-        url: "https://www.cmaanet.org/certification/ccm",
       },
     ],
     marketing: [
@@ -837,7 +824,7 @@ export const certificationData: Record<
         id: "ccrp",
         name: "Certified Clinical Research Project Manager (CCRP)",
         description:
-          "The CCPM certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
+          "The CCRP certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
         idealFor:
           "Project managers in the healthcare or clinical research sectors.",
         prerequisites: [
@@ -1836,7 +1823,7 @@ export const certificationData: Record<
         id: "ccrp",
         name: "Certified Clinical Research Project Manager (CCRP)",
         description:
-          "The CCPM certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
+          "The CCRP certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
         idealFor:
           "Project managers in the healthcare or clinical research sectors.",
         prerequisites: [
@@ -1887,7 +1874,7 @@ export const certificationData: Record<
         id: "ccrp",
         name: "Certified Clinical Research Project Manager (CCRP)",
         description:
-          "The CCPM certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
+          "The CCRP certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
         idealFor:
           "Project managers in the healthcare or clinical research sectors.",
         prerequisites: [
@@ -2403,7 +2390,7 @@ export const certificationData: Record<
         id: "ccrp",
         name: "Certified Clinical Research Project Manager (CCRP)",
         description:
-          "The CCPM certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
+          "The CCRP certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
         idealFor:
           "Project managers in the healthcare or clinical research sectors.",
         prerequisites: [
@@ -2957,7 +2944,7 @@ export const certificationData: Record<
         id: "ccrp",
         name: "Certified Clinical Research Project Manager (CCRP)",
         description:
-          "The CCPM certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
+          "The CCRP certification is for professionals working in clinical project management, particularly in pharmaceutical and healthcare industries. It covers managing clinical trials, research, regulatory requirements, and compliance in project management within healthcare.",
         idealFor:
           "Project managers in the healthcare or clinical research sectors.",
         prerequisites: [

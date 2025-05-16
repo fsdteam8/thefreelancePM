@@ -11,12 +11,14 @@ interface FileUploaderProps {
   value: string;
   onChange: (url: string) => void;
   onUploadStateChange?: (isUploading: boolean) => void;
+  id?: string;
 }
 
 export function FileUploader({
   value,
   onChange,
   onUploadStateChange,
+  id,
 }: FileUploaderProps) {
   const [, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -94,10 +96,10 @@ export function FileUploader({
           </span>
         </div>
         <label
-          htmlFor="file-upload"
+          htmlFor={id ?? "File-Upload"}
           className={cn(
             "flex cursor-pointer items-center gap-1 rounded-md bg-primary/10 px-2 py-1 text-xs font-medium text-primary hover:bg-primary/20",
-            uploading && "pointer-events-none opacity-50"
+            uploading && "pointer-events-none opacity-50",
           )}
         >
           {uploading ? (
@@ -117,7 +119,7 @@ export function FileUploader({
             </>
           )}
           <input
-            id="file-upload"
+            id={id ?? "File-Upload"}
             type="file"
             className="sr-only"
             onChange={handleFileChange}

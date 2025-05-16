@@ -219,6 +219,7 @@ model Template {
   title       String
   description String
   category    TemplateType @default(free)
+  banner String?
   price       Int?
   file        String
   plan        String       @db.ObjectId

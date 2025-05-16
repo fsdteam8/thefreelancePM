@@ -8,6 +8,7 @@ export const teamplateCreateSchema = z.object({
   price: z.string().min(1, { message: "Price is required" }),
   file: z.string().min(1, { message: "File is required" }),
   plan: z.string().min(1, { message: "Plan is required" }),
+  banner: z.string().min(5, { message: "Banner is required" }),
   publishNow: z.boolean().default(false).optional(),
 });
 

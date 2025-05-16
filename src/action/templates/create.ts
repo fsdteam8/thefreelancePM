@@ -29,6 +29,7 @@ export async function createTemplate(data: TemplateCreateType) {
         file: data.file, // assumes this is a file path or URL
         plan: data.plan, // assuming plan ID is provided
         published: data.publishNow ?? false,
+        banner: data.banner,
       },
     });
 

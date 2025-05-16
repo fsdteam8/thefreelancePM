@@ -47,9 +47,9 @@ export default function CertificationsPage() {
   }
 
   // If no recommendations (they already have all relevant certifications)
-  if (recommendations.length === 0) {
+  if (true) {
     return (
-      <div className="container mx-auto px-4 py-8 max-w-3xl">
+      <div className="container mx-auto px-4 py-8 max-w-3xl mt-32">
         <div className="bg-white rounded-lg shadow-md p-8 text-center">
           <h1 className="text-2xl font-bold mb-6">
             Your Certification Recommendations
@@ -65,7 +65,7 @@ export default function CertificationsPage() {
           </div>
 
           <div className="mt-8">
-            <Link href="/">
+            <Link href="/quizzes">
               <Button className="bg-[#004AAD] hover:bg-blue-700">
                 Take Another Quiz
               </Button>

@@ -46,6 +46,7 @@ interface Props {
 export default function AddTemplatesPage({ trigger }: Props) {
   const [open, setOpen] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
+  const [isFileUploading, setFileUploading] = useState(false);
   const [pending, startTransition] = useTransition();
 
   const queryClient = useQueryClient();
@@ -67,6 +68,7 @@ export default function AddTemplatesPage({ trigger }: Props) {
       file: "",
       plan: "",
       publishNow: false,
+      banner: "",
     },
   });
 
@@ -137,6 +139,24 @@ export default function AddTemplatesPage({ trigger }: Props) {
             />
             <FormField
               control={form.control}
+              name="banner"
+              render={({ field }) => (
+                <FormItem className="grid grid-cols-[100px_1fr] items-center gap-4 overflow-hidden">
+                  <FormLabel className="text-right">Banner:</FormLabel>
+                  <FormControl>
+                    <FileUploader
+                      value={field.value}
+                      onChange={field.onChange}
+                      onUploadStateChange={setIsUploading}
+                      id="banner"
+                    />
+                  </FormControl>
+                  <FormMessage className="col-start-2" />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
               name="category"
               render={({ field }) => (
                 <FormItem className="grid grid-cols-[100px_1fr] items-center gap-4">
@@ -182,7 +202,8 @@ export default function AddTemplatesPage({ trigger }: Props) {
                     <FileUploader
                       value={field.value}
                       onChange={field.onChange}
-                      onUploadStateChange={setIsUploading}
+                      onUploadStateChange={setFileUploading}
+                      id="File"
                     />
                   </FormControl>
                   <FormMessage className="col-start-2" />
@@ -245,7 +266,7 @@ export default function AddTemplatesPage({ trigger }: Props) {
               <Button
                 type="submit"
                 className="bg-blue-600 hover:bg-blue-700"
-                disabled={isUploading || pending}
+                disabled={isUploading || pending || isFileUploading}
               >
                 Create {pending && <Loader2 className="animate-spin ml-2" />}
               </Button>
