@@ -21,7 +21,7 @@ const TopPerformingPlan = ({ data }: Props) => {
         <div className="flex items-center gap-2">
           {/* <TrendingUp className="h-5 w-5 text-blue-600" /> */}
           <Image
-            src="/vector-icon-2.png"
+            src="https://files.edgestore.dev/rmbbqbxzosw25w8g/publicFiles/_public/Vector-icon-2.png"
             width={100}
             height={100}
             alt="logo"
