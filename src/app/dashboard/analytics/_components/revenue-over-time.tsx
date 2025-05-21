@@ -82,7 +82,6 @@ const RevenueOverTime = () => {
             <CardTitle className="text-md font-medium">
               Revenue Over Time
             </CardTitle>
-            <div className="font-bold">$XXX</div>
           </div>
         </CardHeader>
         <CardContent>
