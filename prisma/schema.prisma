@@ -64,9 +64,9 @@ model ResetReq {
 model Setting {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   adminId       String   @unique @db.ObjectId
-  siteName      String
-  supportEmail  String   @unique
-  description   String
+  siteName      String?
+  supportEmail  String?   @unique
+  description   String?
   keywords      String[]
   isMaintenance Boolean  @default(false)
 
