@@ -14,6 +14,7 @@ export async function GET(request: NextRequest) {
     const type = searchParams.get("type") || undefined;
     const searchQuery = searchParams.get("searchQuery") || undefined;
     const sortBy = searchParams.get("sortBy") || undefined;
+    const experiences = searchParams.get("experienc") || undefined;
 
     // Validate pagination parameters
     if (page < 1 || limit < 1) {
@@ -53,6 +54,10 @@ export async function GET(request: NextRequest) {
     // Filter by type
     if (type !== "all") {
       where.type = type;
+    }
+
+    if (experiences !== "all") {
+      where.experienc = experiences;
     }
 
     // Determine orderBy condition

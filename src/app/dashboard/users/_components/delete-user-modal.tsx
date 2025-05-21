@@ -96,10 +96,6 @@ export default function DeleteUserModal({ data }: Props) {
                   {userData.plan}
                 </Badge>
               </div>
-              <div className="grid grid-cols-[100px_1fr] items-center">
-                <span className="font-medium">Status:</span>
-                <span>{userData.status}</span>
-              </div>
             </div>
 
             {/* Confirmation input */}

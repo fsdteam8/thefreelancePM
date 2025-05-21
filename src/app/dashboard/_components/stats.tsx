@@ -1,4 +1,4 @@
-import { BarChart3, FileText, ShoppingBag, Users } from "lucide-react";
+import { BarChart3, FileText, ShoppingBag } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
@@ -39,11 +39,11 @@ async function getCurrentMonthEarnings() {
 }
 
 const Stats = async () => {
-  const activeUsers = await prisma.user.count({
-    where: {
-      isActive: true,
-    },
-  });
+  // const activeUsers = await prisma.user.count({
+  //   where: {
+  //     isActive: true,
+  //   },
+  // });
 
   const totalJobPosts = await prisma.job.count();
   const totalCourses = await prisma.course.count();
@@ -51,8 +51,8 @@ const Stats = async () => {
   const monthlyRevenue = await getCurrentMonthEarnings();
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-      <Card>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {/* <Card>
         <CardContent className="flex items-center justify-between p-6">
           <div>
             <p className="text-sm font-medium text-muted-foreground">
@@ -66,7 +66,7 @@ const Stats = async () => {
             <Users className="h-6 w-6 text-primary" />
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
       <Card>
         <CardContent className="flex items-center justify-between p-6">
           <div>

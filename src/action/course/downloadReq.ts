@@ -59,19 +59,17 @@ export async function courseDownload(courseId: string) {
   const isFreeCourse = course.category === "free";
   const isFreeUser = currentSubscription.tier === "free";
 
+  const isProUser = currentSubscription.tier === "pro";
+  const isProCourse = course.category === "pro";
+
+  const isEliteUser = currentSubscription.tier === "elite";
+
   const feature = currentSubscription.getFeature("courses");
 
   if (!feature) {
     return {
       success: false,
       message: "No feature found",
-    };
-  }
-
-  if (feature.remaining !== null && feature.remaining === 0) {
-    return {
-      success: false,
-      message: "You have reached the limit of courses you can download",
     };
   }
 
@@ -91,6 +89,25 @@ export async function courseDownload(courseId: string) {
       success: true,
       message: "File download Link",
       file: course.file, // Assuming this is a URL or path to the file
+    };
+  } else if (feature.remaining !== null && feature.remaining === 0) {
+    return {
+      success: false,
+      message: "You have reached the limit of courses you can download",
+    };
+  } else if (
+    (isProCourse || isFreeCourse) &&
+    (isProUser || isEliteUser) &&
+    feature.remaining !== null &&
+    feature.remaining > 0 &&
+    feature.value !== null &&
+    feature.value > 0
+  ) {
+    await decrementCourseRemaining(feature.id, course.price ?? 0);
+    return {
+      success: true,
+      message: "File download Link",
+      file: course.file,
     };
   }
 

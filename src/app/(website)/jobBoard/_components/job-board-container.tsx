@@ -18,8 +18,6 @@ import JobCard from "./JobCard";
 
 const JobBoardContainer = () => {
   const {
-    status,
-    setStatus,
     localtionFilter,
     setLocationFilter,
     type,
@@ -28,6 +26,8 @@ const JobBoardContainer = () => {
     setQuery,
     sortBy,
     setSortBy,
+    exp,
+    setExp,
   } = useJobBoardStore();
 
   const searchQuery = useDebounce(query, 500);
@@ -41,10 +41,10 @@ const JobBoardContainer = () => {
     hasNextPage,
     isFetchingNextPage,
   } = useInfiniteQuery({
-    queryKey: ["jobs", status, type, localtionFilter, searchQuery, sortBy],
+    queryKey: ["jobs", exp, type, localtionFilter, searchQuery, sortBy],
     queryFn: ({ pageParam = 1 }) =>
       fetch(
-        `/api/dashboard/job?status=${status}&type=${type}&location=${localtionFilter}&searchQuery=${searchQuery}&page=${pageParam}&limit=3&sortBy=${sortBy}`,
+        `/api/dashboard/job?experienc=${exp}&type=${type}&location=${localtionFilter}&searchQuery=${searchQuery}&page=${pageParam}&limit=3&sortBy=${sortBy}`,
       )
         .then((res) => res.json())
         .catch((err) => {
@@ -124,6 +124,7 @@ const JobBoardContainer = () => {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
+                        <SelectItem value="all">All</SelectItem>
                         {countries.map((country) => (
                           <SelectItem key={country} value={country}>
                             {country}
@@ -140,6 +141,7 @@ const JobBoardContainer = () => {
                       <SelectValue placeholder="Job Type" />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="all">All</SelectItem>
                       {Object.values(JobType).map((type) => (
                         <SelectItem key={type} value={type}>
                           {type.replace("_", " ")}
@@ -150,11 +152,12 @@ const JobBoardContainer = () => {
                 </div>
 
                 <div className="shadow-[0px_4px_12px_0px_#0000001A] rounded-[30px]">
-                  <Select value={status} onValueChange={setStatus}>
+                  <Select value={exp} onValueChange={setExp}>
                     <SelectTrigger className="w-full sm:w-[203px] h-[39px] rounded-[30px]">
                       <SelectValue placeholder="Experience Level" />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="all">All</SelectItem>
                       {Object.values(ExperiencesType).map((type) => (
                         <SelectItem key={type} value={type}>
                           {type.replace("_", " ")}
