@@ -6,7 +6,7 @@ export default function Home() {
       <SuccessMessage
         title="Your payment has been received!"
         highlightedWord="received"
-        description="Thank you for your payment. Your plan has been upgraded! Please check your email for a payment confirmation & invoice."
+        description="Thank you for your payment. Your plan has been upgraded! "
         buttonText="Home"
         buttonHref="/"
       />

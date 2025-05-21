@@ -36,7 +36,7 @@ const OverviewStats = () => {
 
   // Data for overview stats
   const overviewStats = [
-    { title: "Total Revenue", value: `$${data?.data.totalRevenue ?? 0}` },
+    // { title: "Total Revenue", value: `$${data?.data.totalRevenue ?? 0}` },
     {
       title: "Active Subscriptions",
       value: data?.data.activeSubscriptions ?? 0,
@@ -82,7 +82,7 @@ const OverviewStats = () => {
           </SelectContent>
         </Select>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {overviewStats.map((stat, index) => (
           <Card key={index}>
             <CardContent className="pt-6 bg-[#F5F7FA] text-center">
