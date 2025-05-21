@@ -131,7 +131,7 @@ const PlanOverview = () => {
             className="bg-[#004AAD] text-white px-4 text-sm font-medium py-2 rounded-full hover:bg-blue-700"
             asChild
           >
-            <Link href="/subscription">Manage Subscription</Link>
+            <Link href="/subscriptions">Manage Subscription</Link>
           </Button>
         </div>
       </div>

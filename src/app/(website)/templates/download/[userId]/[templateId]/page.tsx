@@ -99,14 +99,14 @@ const Page = async ({
           </CardFooter>
         </Card>
 
-        <div className="mt-6 text-center text-sm text-gray-500">
+        {/* <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             Need help?{" "}
             <Link href="/contact" className="text-blue-600 hover:underline">
               Contact Support
             </Link>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
