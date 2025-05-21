@@ -59,16 +59,16 @@ export function UserTableContainer({ plans }: Props) {
       queryKey: ["Users", currentPage, item_per_page],
       queryFn: () =>
         fetch(
-          `/api/dashboard/users?isActive=${status}&planId=${plan}&query=${searchQuery}&page=${currentPage}&limit=${item_per_page}`
+          `/api/dashboard/users?isActive=${status}&planId=${plan}&query=${searchQuery}&page=${currentPage}&limit=${item_per_page}`,
         ).then((res) => res.json()),
     });
 
   // Get badge color based on status
-  const getStatusBadgeClass = (status: string) => {
-    return status === "Active"
-      ? "bg-green-100 text-green-800"
-      : "bg-gray-100 text-gray-800";
-  };
+  // const getStatusBadgeClass = (status: string) => {
+  //   return status === "Active"
+  //     ? "bg-green-100 text-green-800"
+  //     : "bg-gray-100 text-gray-800";
+  // };
 
   // Get badge color based on plan
   const getPlanBadgeClass = (plan: string) => {
@@ -101,7 +101,7 @@ export function UserTableContainer({ plans }: Props) {
                 <TableHead>Name</TableHead>
                 <TableHead>Email</TableHead>
                 {/* <TableHead>Last Active</TableHead> */}
-                <TableHead>Status</TableHead>
+                {/* <TableHead>Status</TableHead> */}
                 <TableHead>Plan</TableHead>
                 <TableHead className="w-[80px] text-right">Action</TableHead>
               </TableRow>
@@ -113,7 +113,7 @@ export function UserTableContainer({ plans }: Props) {
                   <TableCell>{user.name}</TableCell>
                   <TableCell>{user.email}</TableCell>
                   {/* <TableCell>01/15/23 01:16AM EST</TableCell> */}
-                  <TableCell>
+                  {/* <TableCell>
                     <span
                       className={`rounded-full px-2 py-1 text-xs font-medium ${getStatusBadgeClass(
                         user.isActive ? "Active" : "Inactive"
@@ -121,13 +121,13 @@ export function UserTableContainer({ plans }: Props) {
                     >
                       {user.isActive ? "Active" : "Inactive"}
                     </span>
-                  </TableCell>
+                  </TableCell> */}
                   <TableCell>
                     <span
                       className={`rounded-full px-2 py-1 text-xs font-medium ${getPlanBadgeClass(
                         user.userSubscriptions.length > 0
                           ? user.userSubscriptions[0].subscription.title
-                          : "Unknown Plan"
+                          : "Unknown Plan",
                       )}`}
                     >
                       {user.userSubscriptions.length > 0

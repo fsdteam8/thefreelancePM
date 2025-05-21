@@ -57,11 +57,11 @@ export default function UserDetailsModal({ data }: Props) {
                   </Badge>
                 </div>
 
-                <div className="font-medium">Status:</div>
-                <div>{userData.status}</div>
+                {/* <div className="font-medium">Status:</div>
+                <div>{userData.status}</div> */}
               </div>
             </div>
-
+            {/* 
             <div className="bg-gray-50 rounded-lg p-5 mb-6">
               <h3 className="text-blue-600 font-bold mb-4">Quick Stats</h3>
 
@@ -82,7 +82,7 @@ export default function UserDetailsModal({ data }: Props) {
                 <div className="font-medium">Last Activity:</div>
                 <div>2025-04-14</div>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex justify-center gap-4 mb-6">
               <Button

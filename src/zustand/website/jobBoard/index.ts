@@ -11,6 +11,8 @@ interface UsersState {
   setLocationFilter: (location: string) => void;
   sortBy: string;
   setSortBy: (sortBy: string) => void;
+  exp: string;
+  setExp: (data: string) => void;
 }
 
 const useJobBoardStore = create<UsersState>((set) => ({
@@ -24,6 +26,8 @@ const useJobBoardStore = create<UsersState>((set) => ({
   setLocationFilter: (location) => set({ localtionFilter: location }),
   sortBy: "asc",
   setSortBy: (sortBy) => set({ sortBy }),
+  exp: "",
+  setExp: (data) => set({ exp: data }),
 }));
 
 export default useJobBoardStore;
