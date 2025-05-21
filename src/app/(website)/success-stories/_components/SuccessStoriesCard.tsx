@@ -2,7 +2,6 @@
 import { Testmonial } from "@prisma/client";
 import { Rating, Star } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import Image from "next/image";
 
 interface Props {
   data: Testmonial;
@@ -13,7 +12,7 @@ const SuccessStoriesCard = ({ data }: Props) => {
     <section className="w-[390px] p-5 rounded-xl felx items-center">
       <div className="flex gap-4">
         <Rating
-          style={{ maxWidth: 200 }}
+          style={{ maxWidth: 120 }}
           value={data.rating}
           itemStyles={{
             itemShapes: Star,
@@ -30,14 +29,14 @@ const SuccessStoriesCard = ({ data }: Props) => {
         {data.message}
       </p>
       <div className="flex items-center gap-x-[15px]">
-        <div className="h-[60px] w-[60px] object-cover relative">
+        {/* <div className="h-[60px] w-[60px] object-cover relative">
           <Image
             src="https://res.cloudinary.com/drdztqgcx/image/upload/v1745577685/success_g9lyu9.png"
             alt="reviewer image"
             className="h-full w-full object-cover"
             fill
           />
-        </div>
+        </div> */}
         <div>
           <h4 className="text-[#004AAD] text-[18px] font-medium leading-[120%]">
             {data.fullName}
