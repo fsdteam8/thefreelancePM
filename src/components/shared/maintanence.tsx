@@ -1,6 +1,5 @@
 import { Clock, Settings } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function MaintenancePage() {
   return (
@@ -22,12 +21,12 @@ export default function MaintenancePage() {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+          <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-slate-900">
             We&apos;re <span className="text-blue-500">Upgrading</span> Our
             System
           </h1>
 
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-[14px] text-slate-600 max-w-2xl mx-auto">
             The FreelancePM Club is currently undergoing scheduled maintenance.
             We&apos;ll be back online shortly with new features to help you
             manage your freelance projects even better!
@@ -36,7 +35,8 @@ export default function MaintenancePage() {
           <div className="pt-6">
             <a
               href="mailto:support@freelancepmclub.com"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition"
+              target="_blank"
+              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition"
             >
               Contact Support
             </a>
@@ -52,24 +52,27 @@ export default function MaintenancePage() {
             reserved.
           </p>
           <div className="mt-2 flex justify-center space-x-6">
-            <Link
-              href="#"
+            <a
+              href="https://www.youtube.com/@thefreelancepm"
+              target="_blank"
               className="text-slate-500 hover:text-blue-500 transition"
             >
-              Twitter
-            </Link>
-            <Link
-              href="#"
+              Youtube
+            </a>
+            <a
+              target="_blank"
+              href="http://www.linkedin.com/company/the-freelance-pm-club"
               className="text-slate-500 hover:text-blue-500 transition"
             >
               LinkedIn
-            </Link>
-            <Link
-              href="#"
+            </a>
+            <a
+              href="https://www.instagram.com/thefreelancepm"
+              target="_blank"
               className="text-slate-500 hover:text-blue-500 transition"
             >
               Instagram
-            </Link>
+            </a>
           </div>
         </div>
       </footer>

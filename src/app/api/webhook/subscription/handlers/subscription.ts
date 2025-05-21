@@ -36,9 +36,15 @@ export async function handleSubscriptionCheckout(
           total: 10,
           remaining: 10,
           value: 5000,
-          enabled: null,
+          enabled: true,
         },
-        { name: "courses", total: 1, remaining: 1, value: 5000, enabled: null },
+        {
+          name: "courses",
+          total: 5000,
+          remaining: 5000,
+          value: 50000,
+          enabled: true,
+        },
       );
       break;
     case process.env.NEXT_PUBLIC_PRO_PLAN_ID: // Pro
