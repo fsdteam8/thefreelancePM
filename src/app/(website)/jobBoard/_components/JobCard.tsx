@@ -22,7 +22,7 @@ const JobCard = ({ data }: JobCardProps) => {
           return;
         }
 
-        window.location.href = data.url;
+        window.open(data.url, "_blank");
       });
     });
   };

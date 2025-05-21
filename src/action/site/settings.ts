@@ -81,11 +81,16 @@ export async function ChangeMaintenance(data: MaintenanceFormType) {
 
   try {
     // Update maintenance mode in database
-    const updatedSetting = await prisma.setting.update({
+    const updatedSetting = await prisma.setting.upsert({
       where: {
         adminId: cu.user.id,
       },
-      data: {
+      update: {
+        isMaintenance: data.maintenanceMode,
+      },
+      create: {
+        adminId: cu.user.id as string,
+
         isMaintenance: data.maintenanceMode,
       },
     });

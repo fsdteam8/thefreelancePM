@@ -1,3 +1,4 @@
+import { prisma } from "@/lib/prisma";
 import AppProvider from "@/provider/AppProvider";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google"; // Optional: For fallback fonts
@@ -12,27 +13,34 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export const metadata: Metadata = {
-  title: "The FreelancePM - Freelance Project Management Services",
-  description:
-    "The FreelancePM offers expert freelance project management service to help your team deliver on time and within budget.",
-  keywords: [
-    "freelance project managers",
-    "project management services",
-    "remote project manager",
-    "freelance PM for startups",
-    "contract project manager",
-    "agile project manager freelance",
-    "scrum master freelance",
-    "tech project manager freelance",
-    "product manager freelance",
-    "fractional project manager",
-    "jira project management",
-    "asana project management",
-    "remote team management",
-    "startup project planning",
-  ],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await prisma.setting.findFirst();
+
+  return {
+    title:
+      data?.siteName ??
+      "The FreelancePM - Freelance Project Management Services",
+    description:
+      data?.description ??
+      "The FreelancePM offers expert freelance project management service to help your team deliver on time and within budget.",
+    keywords: data?.keywords ?? [
+      "freelance project managers",
+      "project management services",
+      "remote project manager",
+      "freelance PM for startups",
+      "contract project manager",
+      "agile project manager freelance",
+      "scrum master freelance",
+      "tech project manager freelance",
+      "product manager freelance",
+      "fractional project manager",
+      "jira project management",
+      "asana project management",
+      "remote team management",
+      "startup project planning",
+    ],
+  };
+}
 
 export default async function RootLayout({
   children,
